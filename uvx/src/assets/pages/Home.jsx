@@ -3,6 +3,8 @@ import HeroSection from "../../components/Hero.jsx";
 import ContactSection from "../../components/contactinfo.jsx";
 import ServicesSection from "../../components/Services.jsx";
 import WhyChooseUs from "../../components/ChooseUS.jsx";
+import Stats from "../../components/Stats.jsx";
+import PartnersSection from "../../components/PartnerSection.jsx";
 
 
 const Home = () => {
@@ -12,6 +14,11 @@ const Home = () => {
         
         <WhyChooseUs />
         <ServicesSection />
+        <div className=" bg-[#F4D03F] w-screen h-px bg-[#1C1C1C] "></div>
+
+        <Stats />
+        <PartnersSection />
+        <div className=" bg-[#F4D03F] w-screen h-px bg-[#1C1C1C] "></div>
         <ContactSection /> 
       </>
     );

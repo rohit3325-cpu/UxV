@@ -4,9 +4,9 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="w-screen h-screen bg-black text-white flex items-center justify-center"
+      className=" top-2 w-screen h-screen bg-black text-white flex items-center justify-center"
     >
-      <div className="max-w-7xl mx-auto px-6 text-center md:text-left grid md:grid-cols-2 gap-12 items-center">
+      <div className="top-1 max-w-7xl mx-auto px-6 text-center md:text-left grid md:grid-cols-2 gap-12 items-center">
         
         {/* Left - Content */}
         <div className="space-y-6 top-14">

@@ -66,11 +66,13 @@ const ServicesSection = () => {
   return (
     <section id="services" className="w-full bg-[#0f0f0f] text-white py-24 px-6 md:px-20">
       <div className="max-w-6xl mx-auto space-y-16">
-        {/* Header */}
+
         <div className="text-center">
-          <h2 className="text-4xl font-bold mb-4">
-            What We <span className="text-[#F4D03F]">Offer</span>
-          </h2>
+        <h2 className="text-4xl font-bold mb-4 text-center relative inline-block after:block after:w-full after:h-[2px] after:bg-[#F4D03F] after:mt-2">
+  <span className="text-white">What We <span className="text-[#F4D03F]">Offer</span></span>
+</h2>
+
+
           <p className="text-[#B3B3B3] text-lg max-w-2xl mx-auto">
             From strategy to execution — we help brands grow through innovative marketing solutions.
           </p>
