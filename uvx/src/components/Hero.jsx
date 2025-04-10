@@ -9,7 +9,7 @@ const HeroSection = () => {
       <div className="max-w-7xl mx-auto px-6 text-center md:text-left grid md:grid-cols-2 gap-12 items-center">
         
         {/* Left - Content */}
-        <div className="space-y-6">
+        <div className="space-y-6 top-14">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
             Crafting <span className="text-[#F4D03F]">Impactful</span><br />
             Digital Experiences
