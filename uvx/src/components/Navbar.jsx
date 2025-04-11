@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full fixed top-2 left-0 z-50 bg-black/80 backdrop-blur-sm border-b border-[#1C1C1C]">
+    <nav className="w-full fixed top-0 left-0 z-50 bg-black/80 backdrop-blur-sm border-b border-[#1C1C1C]">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         
         {/* Logo Section */}
@@ -23,7 +23,7 @@ const Navbar = () => {
           <li><Link to="/" className="text-[#B3B3B3] hover:text-[#F4D03F] transition">Home</Link></li>
           <li><Link to="/about" className="text-[#B3B3B3] hover:text-[#F4D03F] transition">About</Link></li>
           <li><HashLink smooth to="/#services" className="text-[#B3B3B3] hover:text-[#F4D03F] transition">Services</HashLink></li>
-          <li><HashLink smooth to="/#stats" className="text-[#B3B3B3] hover:text-[#F4D03F] transition">Work</HashLink></li>
+          <li><HashLink smooth to="/#work" className="text-[#B3B3B3] hover:text-[#F4D03F] transition">Work</HashLink></li>
         </ul>
 
         {/* Contact Button */}

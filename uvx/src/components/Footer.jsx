@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Instagram, Twitter } from 'lucide-react';
+import { Facebook, Instagram, Twitter, MessageCircle } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -20,7 +20,10 @@ export default function Footer() {
           <ul className="space-y-2 text-[#B3B3B3] text-sm">
             {["Home", "About", "Services", "Work", "Contact"].map((link, idx) => (
               <li key={idx}>
-                <a href={`#${link.toLowerCase()}`} className="hover:text-[#F4D03F] transition-colors">
+                <a
+                  href={`#${link.toLowerCase()}`}
+                  className="hover:text-[#F4D03F] transition-colors"
+                >
                   {link}
                 </a>
               </li>
@@ -28,21 +31,26 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Social Media */}
+        {/* Social Media + WhatsApp */}
         <div>
           <h3 className="text-lg font-semibold mb-4">Stay Connected</h3>
           <p className="text-[#B3B3B3] mb-4 text-sm">Follow us for the latest insights:</p>
-          <div className="flex gap-4">
-            <a href="#" className="hover:text-[#F4D03F] transition">
-              <Facebook size={20} />
-            </a>
-            <a href="#" className="hover:text-[#F4D03F] transition">
-              <Instagram size={20} />
-            </a>
-            <a href="#" className="hover:text-[#F4D03F] transition">
-              <Twitter size={20} />
-            </a>
+          <div className="flex gap-4 mb-4">
+            <a href="#" className="hover:text-[#F4D03F] transition"><Facebook size={20} /></a>
+            <a href="#" className="hover:text-[#F4D03F] transition"><Instagram size={20} /></a>
+            <a href="#" className="hover:text-[#F4D03F] transition"><Twitter size={20} /></a>
           </div>
+
+          {/* WhatsApp Button */}
+          <a
+            href="https://wa.me/916203199769?text=Hi%20UvX%20Media!%20I'm%20interested%20in%20your%20services."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-600 transition"
+          >
+            <MessageCircle size={18} />
+            Chat on WhatsApp
+          </a>
         </div>
       </div>
 
@@ -53,3 +61,4 @@ export default function Footer() {
     </footer>
   );
 }
+

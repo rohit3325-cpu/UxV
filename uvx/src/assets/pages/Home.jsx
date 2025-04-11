@@ -5,6 +5,7 @@ import ServicesSection from "../../components/Services.jsx";
 import WhyChooseUs from "../../components/ChooseUS.jsx";
 import Stats from "../../components/Stats.jsx";
 import PartnersSection from "../../components/PartnerSection.jsx";
+import BrandBanner from "../../components/Brandbanner.jsx";
 
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
 
         <Stats />
         <PartnersSection />
+        <BrandBanner />
         <div className=" bg-[#F4D03F] w-screen h-px bg-[#1C1C1C] "></div>
         <ContactSection /> 
       </>
