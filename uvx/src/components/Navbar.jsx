@@ -20,7 +20,7 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <ul className="hidden md:flex gap-10 text-sm font-medium">
-          <li><Link to="/" className="text-[#B3B3B3] hover:text-[#F4D03F] transition">Home</Link></li>
+          <li><Link smooth to="/#home" className="text-[#B3B3B3] hover:text-[#F4D03F] transition">Home</Link></li>
           <li><Link to="/about" className="text-[#B3B3B3] hover:text-[#F4D03F] transition">About</Link></li>
           <li><HashLink smooth to="/#services" className="text-[#B3B3B3] hover:text-[#F4D03F] transition">Services</HashLink></li>
           <li><HashLink smooth to="/#work" className="text-[#B3B3B3] hover:text-[#F4D03F] transition">Work</HashLink></li>
