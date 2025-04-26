@@ -11,7 +11,7 @@ const HeroSection = () => {
         {/* Left - Content */}
         <div className="space-y-6 flex flex-col justify-center">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            Unlocking <span className="text-[#F4D03F]">Collaborative</span><br />
+            Unlocking <span className="text-[#F4D03F]">Collaboration</span><br />
             with U<span className="text-[#F4D03F]">x</span>V Media.<br />
           </h1>
 
