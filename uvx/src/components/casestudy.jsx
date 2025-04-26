@@ -3,29 +3,29 @@ export default function CaseStudies() {
       {
         client: "Client 1",
         summary: "Statement and the work.",
-        image: "/images/case-aura.jpg", // Replace with your actual image paths
+        image: "/images/case-aura.jpg", 
       },
       {
         client: "Client 2",
         summary: "Statement and the work.",
-        image: "/images/case-boltwear.jpg", // Replace with your actual image paths
+        image: "/images/case-boltwear.jpg", 
       },
       {
         client: "Client 3",
         summary: "Statement and the work.",
-        image: "/images/case-pulse.jpg", // Replace with your actual image paths
+        image: "/images/case-pulse.jpg", 
       },
     ];
   
     return (
-      <section id="case-studies" className="w-full py-24 px-6 md:px-12" style={{ backgroundColor: "#EAEAEA" }}> {/* Light Gray background for entire section */}
+      <section id="case-studies" className="w-full py-24  px-6 md:px-12" style={{ backgroundColor: "#EAEAEA" }}> {/* Light Gray background for entire section */}
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-4">
               Case <span className="text-[#F4D03F]">Studies</span>
             </h2>
             <p className="text-[#1C1C1C] max-w-2xl mx-auto text-base md:text-lg">
-              Real brands, real results. See how UvX Media drives impact.
+              Real brands, real results. See how UxV Media drives impact.
             </p>
           </div>
   

@@ -7,11 +7,12 @@ import Stats from "../../components/Stats.jsx";
 import PartnersSection from "../../components/PartnerSection.jsx";
 import BrandBanner from "../../components/Brandbanner.jsx";
 import CaseStudies from "../../components/casestudy.jsx";
-
+import Navbar from "../../components/Navbar.jsx";
 
 const Home = () => {
     return (
       <>
+        <Navbar />
         <HeroSection />
         
         
