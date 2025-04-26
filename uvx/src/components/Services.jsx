@@ -40,6 +40,11 @@ const services = [
     title: "Campaign Management",
     description: "Full-service campaign planning and execution for real impact and recognition.",
   },
+  {
+    icon: <Megaphone size={24} className="text-[#F4D03F]" />,
+    title: "Campaign Management",
+    description: "Full-service campaign planning and execution for real impact and recognition.",
+  },
 ];
 
 const AnimatedItem = ({ children, delay = 0 }) => {
@@ -64,31 +69,43 @@ const AnimatedItem = ({ children, delay = 0 }) => {
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="w-full bg-[#0f0f0f] text-white py-24 px-6 md:px-20">
+    <section id="services" className="w-full bg-[#F5F5F5] text-[#1C1C1C] py-24 px-6 md:px-20">
       <div className="max-w-6xl mx-auto space-y-16">
 
+        {/* Section Title and Description */}
         <div className="text-center">
-        <h2 className="text-4xl font-bold mb-4 text-center relative inline-block after:block after:w-full after:h-[2px] after:bg-[#F4D03F] after:mt-2">
-  <span className="text-white">What We <span className="text-[#F4D03F]">Offer</span></span>
-</h2>
+          <h2 className="text-4xl font-bold mb-4 text-center relative inline-block after:block after:w-full after:h-[2px] after:bg-[#F4D03F] after:mt-2">
+            <span className="text-[#1C1C1C]">What We <span className="text-[#F4D03F]">Offer</span></span>
+          </h2>
 
-
-          <p className="text-[#B3B3B3] text-lg max-w-2xl mx-auto">
+          <p className="text-yellow text-lg max-w-2xl mx-auto">
             From strategy to execution — we help brands grow through innovative marketing solutions.
           </p>
         </div>
 
-        {/* Services List */}
-        <div className="space-y-12">
-          {services.map((service, idx) => (
-            <AnimatedItem key={idx} delay={idx * 0.1}>
-              <div className="mt-1">{service.icon}</div>
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-1">{service.title}</h3>
-                <p className="text-[#B3B3B3]">{service.description}</p>
-              </div>
-            </AnimatedItem>
-          ))}
+        {/* Services Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+          {/* Services List */}
+          <div className="space-y-12">
+            {services.map((service, idx) => (
+              <AnimatedItem key={idx} delay={idx * 0.1}>
+                <div className="mt-1">{service.icon}</div>
+                <div>
+                  <h3 className="text-xl font-semibold text-[#1C1C1C] mb-1">{service.title}</h3>
+                  <p className="text-[#1C1C1C]">{service.description}</p>
+                </div>
+              </AnimatedItem>
+            ))}
+          </div>
+
+          {/* Image on the Right */}
+          <div className="flex justify-center h- md:justify-end">
+            <img
+              src="image45.jpg" // Replace with the actual image URL
+              alt="Services "
+              className="w-full  max-w-md mg-b-5 rounded-lg shadow-lg object-contain"
+            />
+          </div>
         </div>
       </div>
     </section>

@@ -36,7 +36,7 @@ const reasons = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="w-full bg-[#0f0f0f] text-white py-24 px-6 md:px-20">
+    <section className="w-full bg-[#F5F5F5] text-[#1C1C1C] py-24 px-6 md:px-20"> {/* Light Background */}
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">
@@ -51,12 +51,12 @@ const WhyChooseUs = () => {
           {reasons.map((item, idx) => (
             <div
               key={idx}
-              className="flex items-start gap-5 p-4 transition-transform duration-300 ease-in-out hover:scale-[1.02] hover:bg-[#1a1a1a] rounded-lg hover:shadow-[0_0_20px_#F4D03F40]"
+              className="flex items-start gap-5 p-4 transition-transform duration-300 ease-in-out hover:scale-[1.02] hover:bg-[#EAEAEA] rounded-lg hover:shadow-[0_0_20px_#F4D03F40]" // Light hover effect
             >
               <div>{item.icon}</div>
               <div>
                 <h4 className="text-xl font-semibold mb-2">{item.title}</h4>
-                <p className="text-[#B3B3B3]">{item.description}</p>
+                <p className="text-[#1C1C1C]">{item.description}</p> {/* Dark text for readability */}
               </div>
             </div>
           ))}

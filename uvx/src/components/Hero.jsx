@@ -4,18 +4,18 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className=" top-2 w-screen h-screen bg-black text-white flex items-center justify-center"
+      className="w-screen h-screen bg-[#F5F5F5] text-[#000000] flex items-center justify-center pt-20" // Added pt-20 for space below the navbar
     >
-      <div className="top-1 max-w-7xl mx-auto px-6 text-center md:text-left grid md:grid-cols-2 gap-12 items-center">
-        
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center h-full">
+
         {/* Left - Content */}
-        <div className="space-y-6 top-14">
+        <div className="space-y-6 flex flex-col justify-center">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            Crafting <span className="text-[#F4D03F]">Impactful</span><br />
+            Unlocking <span className="text-[#F4D03F]">Collaborative</span><br />
             Digital Experiences
           </h1>
 
-          <p className="text-[#B3B3B3] max-w-lg">
+          <p className="text-[#1C1C1C] max-w-lg">
             At UvX, we blend creativity and strategy to build marketing solutions that connect, convert, and captivate your audience.
           </p>
 
@@ -38,7 +38,7 @@ const HeroSection = () => {
         {/* Right - Hero Image */}
         <div className="flex justify-center md:justify-end">
           <img
-            src="https://arcxp-prod.adage.com/resizer/v2/FHQGW2GOSZFB3PRQRRYAJ7BQE4.png?smart=true&auth=ede65f4f344fc1ffef60322b0403fb900e2417830cea2fc2b79cf008fd0de5e9&width=3000&height=1687" // Replace with your actual image
+            src="mainphoto.png" // Replace with your actual image
             alt="Marketing Illustration"
             className="w-full max-w-md object-contain"
           />
@@ -49,6 +49,10 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+
+
+
 
 
 

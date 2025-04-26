@@ -24,7 +24,7 @@ const companies = [
 
 const CompaniesSection = () => {
   return (
-    <section className="bg-[#0f0f0f] text-white py-24 px-6 md:px-20">
+    <section className="bg-[#F5F5F5] text-[#1C1C1C] py-24 px-6 md:px-20"> {/* Light background */}
       <div className="max-w-6xl mx-auto text-center space-y-16">
         <h2 className="text-4xl font-bold">
           What Our <span className="text-[#F4D03F]">Partners Say</span>
@@ -34,14 +34,14 @@ const CompaniesSection = () => {
           {companies.map((company, idx) => (
             <div
               key={idx}
-              className="bg-[#1C1C1C] rounded-2xl p-6 space-y-6 hover:shadow-lg transition-all duration-300"
+              className="bg-[#FFFFFF] rounded-2xl p-6 space-y-6 shadow-md hover:shadow-[0_4px_6px_rgba(244,208,63,0.6)]  transition-all duration-300" 
             >
               <img
                 src={company.logo}
                 alt={company.name}
                 className="h-12 mx-auto object-contain"
               />
-              <p className="text-[#B3B3B3] text-sm">{company.review}</p>
+              <p className="text-[#1C1C1C] text-sm">{company.review}</p> {/* Dark text for reviews */}
               <div className="flex justify-center gap-1">
                 {[...Array(company.rating)].map((_, i) => (
                   <Star key={i} size={18} className="text-[#F4D03F] fill-[#F4D03F]" />

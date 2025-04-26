@@ -19,7 +19,7 @@ const Stats = () => {
   return (
     <section
       id="work"
-      className="bg-[#0f0f0f] text-white py-24 px-6 md:px-20"
+      className="bg-[#F5F5F5] text-[#1C1C1C] py-24 px-6 md:px-20" // Light Background
       ref={ref}
     >
       <div className="max-w-6xl mx-auto text-center space-y-12">
@@ -38,7 +38,9 @@ const Stats = () => {
                 )}
                 {item.isMillion && "M"}
               </div>
-              <p className="text-[#B3B3B3] text-sm text-center">{item.label}</p>
+              <p className="text-[#1C1C1C] text-sm text-center"> {/* Dark text for label */}
+                {item.label}
+              </p>
             </div>
           ))}
         </div>
@@ -48,4 +50,3 @@ const Stats = () => {
 };
 
 export default Stats;
-
