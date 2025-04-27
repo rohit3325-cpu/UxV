@@ -8,7 +8,7 @@ export default function Footer() {
 
         {/* Logo + Description */}
         <div>
-          <h2 className="text-2xl font-bold mb-2 text-[#F4D03F]">UvX</h2>
+          <h2 className="text-2xl font-bold mb-2 text-[#F4D03F]">UxV</h2>
           <p className="text-[#333333]">
             Your growth partner in the digital world. Strategy. Execution. Results.
           </p>
@@ -43,7 +43,7 @@ export default function Footer() {
 
           {/* WhatsApp Button */}
           <a
-            href="https://wa.me/916203199769?text=Hi%20UvX%20Media!%20I'm%20interested%20in%20your%20services."
+            href="https://wa.me/919870100609?text=Hi%20UvX%20Media!%20I'm%20interested%20in%20your%20services."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-600 transition"
@@ -56,7 +56,7 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="border-t border-[#E0E0E0] mt-10 pt-6 text-center text-sm text-[#333333]">
-        © {new Date().getFullYear()} UvX Media. All rights reserved.
+        © {new Date().getFullYear()} UxV Media. All rights reserved.
       </div>
     </footer>
   );

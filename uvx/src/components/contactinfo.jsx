@@ -18,9 +18,11 @@ const ContactSection = () => {
           </p>
 
           <div className="space-y-4 text-[#4A4A4A]">
-            <p><strong>Email:</strong> contact@uvxmedia.com</p>
-            <p><strong>Phone:</strong> +91 62031 99769</p>
-            <p><strong>Location:</strong> Delhi, India</p>
+            <p><strong>Email:</strong> hi@uxvmedia.com</p>
+            <p><strong>Phone:</strong> +91 98701 00609</p>
+            <p><strong>Location:</strong>BMDI Creators Pvt Ltd <br />
+            13 (Basement) Vinoba Puri Delhi -110024</p>
+            
           </div>
         </div>
 
@@ -76,4 +78,5 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
+
 
