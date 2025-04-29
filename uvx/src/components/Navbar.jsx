@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Mail, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import NavLogo from "../assets/images/UxV_Full logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +23,7 @@ const Navbar = () => {
 
           {/* Logo Section */}
           <div className="flex bd items-center gap-2">
-            <img src="UxV_Full logo.png" alt="UxV Media Logo" className="w-12 h-12  object-contain" />
+            <img src={NavLogo} alt="NavLogo" className="w-12 h-12  object-contain" />
           </div>
 
           {/* Desktop Links */}

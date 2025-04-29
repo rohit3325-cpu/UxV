@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion"; 
+import MainP from "../assets/images/mainphoto.png";
 
 const HeroSection = () => {
   return (
@@ -46,7 +47,7 @@ const HeroSection = () => {
         {/* Right - Hero Image */}
         <div className="flex justify-center h-full md:justify-end">
           <img
-            src="mainphoto.png"
+            src={MainP}
             alt="Marketing Illustration"
             className="w-full h-full max-w-md object-contain"
           />

@@ -1,29 +1,35 @@
+import KotakImage from "../assets/images/kotak-mahindra.webp";
+import PaytmImage from "../assets/images/Paytm-Logo.wine.webp";
+import BinanceImage from "../assets/images/Binance.webp";
+import AngelOneImage from "../assets/images/AngelOne3.png";
+import UnivestImage from "../assets/images/univest3.png";
+
 export default function CaseStudies() {
   const caseStudies = [
     {
       client: "Kotak811",
       summary: "Increased app engagement with Gen Z-focused campaigns.",
-      image: "kotak-mahindra.webp", 
+      image: KotakImage, 
     },
     {
       client: "Paytm Money",
       summary: "Boosted user growth through performance marketing.",
-      image: "Paytm-Logo.wine.webp", 
+      image: PaytmImage,  
     },
     {
       client: "Binance",
       summary: "Expanded brand presence with influencer partnerships.",
-      image: "Binance.webp", 
+      image: BinanceImage, 
     },
     {
       client: "AngelOne",
       summary: "Drove new account openings with targeted ads.",
-      image: "AngelOne3.png", 
+      image: AngelOneImage, 
     },
     {
       client: "Univest",
       summary: "Improved app retention with community-driven marketing.",
-      image: "univest3.png", 
+      image: UnivestImage, 
     },
     {
       client: "cc",
