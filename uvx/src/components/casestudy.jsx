@@ -36,11 +36,11 @@ export default function CaseStudies() {
     <section id="case-studies" className="w-full py-24 px-6 md:px-12" style={{ backgroundColor: "#EAEAEA" }}>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-4">
-            Case <span className="text-[#F4D03F]">Studies</span>
+          <h2 className="text-5xl font-bold mb-4 text-center relative inline-block after:block after:w-full after:h-[2px] after:bg-[#F4D03F] after:mt-2">
+            <span className="text-black">Case</span> <span className="text-[#F4D03F]">Studies</span>
           </h2>
           <p className="text-[#1C1C1C] max-w-2xl mx-auto text-base md:text-lg">
-            Real brands, real results. See how UvX Media drives impact.
+            Real brands, real results. See how UxV Media drives impact.
           </p>
         </div>
 

@@ -36,13 +36,15 @@ const reasons = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="w-full bg-[#F5F5F5] text-[#1C1C1C] py-24 px-6 md:px-20"> {/* Light Background */}
+    <section className="w-full bg-[#F5F5F5] text-[#1C1C1C] py-24 px-6 md:px-20"> 
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">
+           <span className="text-5xl font-bold mb-4 text-center relative inline-block after:block after:w-full after:h-[2px] after:bg-[#F4D03F] after:mt-2">
             Why Choose <span className="text-[#F4D03F]">UxV</span>
+            </span>
           </h2>
-          <p className="text-[#B3B3B3] text-lg max-w-2xl mx-auto">
+          <p className="text-[#1C1C1C] text-lg max-w-2xl mx-auto">
             We're not just another agency — we're your edge in a noisy digital world.
           </p>
         </div>

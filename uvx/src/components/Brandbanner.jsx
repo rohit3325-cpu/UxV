@@ -95,9 +95,9 @@ const brands = [
 
 const BrandBanner = () => {
   return (
-    <div className="w-screen overflow-hidden bg-[#1C1C1C] py-10">
-      <h2 className="text-center text-white text-2xl md:text-3xl font-semibold mb-6">
-        Brands We've Collaborated With
+    <div className="w-screen overflow-hidden bg-[#F5F5F5] py-10">
+      <h2 className="text-center text-black text-2xl md:text-3xl font-semibold mb-6">
+          Brands We've Collaborated With
       </h2>
 
       <div className="relative w-full overflow-x-hidden">

@@ -28,7 +28,7 @@ const ContactSection = () => {
 
         {/* Right Side - Form */}
         <form
-          action="https://formspree.io/f/mvgkdzya"
+          action="https://formspree.io/f/mnndjpzd "
           method="POST"
           className="space-y-6 bg-[#F4F4F4] p-8 rounded-2xl shadow-lg"
         >
