@@ -1,8 +1,9 @@
 import KotakImage from "../assets/images/kotak-mahindra.webp";
 import PaytmImage from "../assets/images/Paytm-Logo.wine.webp";
 import BinanceImage from "../assets/images/Binance.webp";
-import AngelOneImage from "../assets/images/AngelOne3.png";
-import UnivestImage from "../assets/images/univest3.png";
+import AngelOneImage from "../assets/images/AngelOne2.png";
+import UnivestImage from "../assets/images/univest4.png";
+import ZebpayImage from "../assets/images/Zebpay2.png";
 
 export default function CaseStudies() {
   const caseStudies = [
@@ -32,9 +33,9 @@ export default function CaseStudies() {
       image: UnivestImage, 
     },
     {
-      client: "cc",
-      summary: " .",
-      image: "--", 
+      client: "Zebpay",
+      summary: "Enhanced brand visibility through strategic campaigns.",
+      image: ZebpayImage, 
     },
   ];
 

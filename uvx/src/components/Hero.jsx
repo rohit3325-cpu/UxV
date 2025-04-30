@@ -1,14 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion"; 
-import MainP from "../assets/images/mainphoto.png";
+import MainP from "../assets/images/mainpic.png";
 
 const HeroSection = () => {
   return (
     <section
       id="home"
-      className="w-screen min-h-screen bg-[#F5F5F5] text-[#000000] flex items-center justify-center pt-20 md:pt-32"
+      className="w-screen min-h-screen bg-[#F5F5F5] text-[#000000] flex items-center justify-center pt-20 md:pt-30"
     >
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center h-full">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center h-full ">
 
         {/* Left - Content */}
         <div className="space-y-6 flex flex-col justify-center">
