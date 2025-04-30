@@ -25,7 +25,7 @@ const Home = () => {
 
         <Stats />
         {/* <PartnersSection /> */}
-        {/* <BrandBanner /> */}
+        <BrandBanner />
         <div className=" bg-[#F4D03F] w-screen h-px bg-[#1C1C1C] "></div>
         <ContactSection /> 
       </>

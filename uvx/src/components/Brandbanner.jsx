@@ -1,96 +1,74 @@
 import React from "react";
+import KotakImage from "../assets/images/kotakbanner.webp";
+import PaytmImage from "../assets/images/paytmbanner.webp";
+import BinanceImage from "../assets/images/binancebanner.webp";
+import AngelOneImage from "../assets/images/angelbanner.webp";
+import UnivestImage from "../assets/images/univest.webp";
+import ZebpayImage from "../assets/images/Policybazaar_Logo.gif";
+
 
 const brands = [
   {
-    name: "Nike",
-    logo: "https://1000logos.net/wp-content/uploads/2020/04/Garnier-Logo-500x313.jpg",
+    name: "Kotak811",
+    logo: KotakImage,
     link: "https://www.nike.com",
   },
   {
-    name: "Apple",
-    logo: "https://marketplace.canva.com/EAFSRVOchFk/1/0/1600w/canva-blue-minimalist-mountain-tooth-logo-design-ZEsuedWE0vQ.jpg",
-    link: "https://www.apple.com",
+    name: "Paytm Money",
+    logo: PaytmImage,
+    link: "https://www.paytm.com",
   },
   {
-    name: "Coca Cola",
-    logo: "https://cdn1.iconfinder.com/data/icons/logos-brands-in-colors/567/Spotify_Logo_RGB_Green-512.png",
-    link: "https://www.coca-cola.com",
+    name: "Binance",
+    logo: BinanceImage,
+    link: "https://www.binance.com",
   },
   {
-    name: "Samsung",
-    logo: "https://cdn.logojoy.com/wp-content/uploads/20240521123806/alexander-shatov-w-qqwn5O-4I-unsplash-600x450.jpg",
-    link: "https://www.samsung.com",
+    name: "AngelOne",
+    logo: AngelOneImage,
+    link: "https://www.angelone.com",
   },
   {
-    name: "Adidas",
-    logo: "https://preview.thenewsmarket.com/Previews/ADID/StillAssets/960x540/689347.jpg",
-    link: "https://www.adidas.com",
+    name: "Univest",
+    logo: UnivestImage,
+    link: "https://www.univest.com",
   },
   {
-    name: "Samsung",
-    logo: "https://cdn.logojoy.com/wp-content/uploads/20240521123806/alexander-shatov-w-qqwn5O-4I-unsplash-600x450.jpg",
-    link: "https://www.samsung.com",
+    name: "Zebpay",
+    logo: ZebpayImage,
+    link: "https://www.zebpay.com",
   },
   {
-    name: "Adidas",
-    logo: "https://preview.thenewsmarket.com/Previews/ADID/StillAssets/960x540/689347.jpg",
-    link: "https://www.adidas.com",
-  },
-  {
-    name: "Coca Cola",
-    logo: "https://cdn1.iconfinder.com/data/icons/logos-brands-in-colors/567/Spotify_Logo_RGB_Green-512.png",
-    link: "https://www.coca-cola.com",
-  },
-  {
-    name: "Samsung",
-    logo: "https://cdn.logojoy.com/wp-content/uploads/20240521123806/alexander-shatov-w-qqwn5O-4I-unsplash-600x450.jpg",
-    link: "https://www.samsung.com",
-  },
-  {
-    name: "Nike",
-    logo: "https://1000logos.net/wp-content/uploads/2020/04/Garnier-Logo-500x313.jpg",
+    name: "Kotak811",
+    logo: KotakImage,
     link: "https://www.nike.com",
   },
   {
-    name: "Apple",
-    logo: "https://marketplace.canva.com/EAFSRVOchFk/1/0/1600w/canva-blue-minimalist-mountain-tooth-logo-design-ZEsuedWE0vQ.jpg",
-    link: "https://www.apple.com",
+    name: "Paytm Money",
+    logo: PaytmImage,
+    link: "https://www.paytm.com",
   },
   {
-    name: "Coca Cola",
-    logo: "https://cdn1.iconfinder.com/data/icons/logos-brands-in-colors/567/Spotify_Logo_RGB_Green-512.png",
-    link: "https://www.coca-cola.com",
+    name: "Binance",
+    logo: BinanceImage,
+    link: "https://www.binance.com",
   },
   {
-    name: "Samsung",
-    logo: "https://cdn.logojoy.com/wp-content/uploads/20240521123806/alexander-shatov-w-qqwn5O-4I-unsplash-600x450.jpg",
-    link: "https://www.samsung.com",
+    name: "AngelOne",
+    logo: AngelOneImage,
+    link: "https://www.angelone.com",
   },
   {
-    name: "Adidas",
-    logo: "https://preview.thenewsmarket.com/Previews/ADID/StillAssets/960x540/689347.jpg",
-    link: "https://www.adidas.com",
+    name: "Univest",
+    logo: UnivestImage,
+    link: "https://www.univest.com",
   },
   {
-    name: "Samsung",
-    logo: "https://cdn.logojoy.com/wp-content/uploads/20240521123806/alexander-shatov-w-qqwn5O-4I-unsplash-600x450.jpg",
-    link: "https://www.samsung.com",
+    name: "Policybazaar",
+    logo: ZebpayImage,
+    link: "https://www.policybazaar.com",
   },
-  {
-    name: "Adidas",
-    logo: "https://preview.thenewsmarket.com/Previews/ADID/StillAssets/960x540/689347.jpg",
-    link: "https://www.adidas.com",
-  },
-  {
-    name: "Coca Cola",
-    logo: "https://cdn1.iconfinder.com/data/icons/logos-brands-in-colors/567/Spotify_Logo_RGB_Green-512.png",
-    link: "https://www.coca-cola.com",
-  },
-  {
-    name: "Samsung",
-    logo: "https://cdn.logojoy.com/wp-content/uploads/20240521123806/alexander-shatov-w-qqwn5O-4I-unsplash-600x450.jpg",
-    link: "https://www.samsung.com",
-  },
+ 
 ];
 
 const BrandBanner = () => {

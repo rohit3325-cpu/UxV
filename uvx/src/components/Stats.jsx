@@ -4,10 +4,10 @@ import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
 const stats = [
-  { label: "Clients Served", value: 120 },
-  { label: "Campaigns Launched", value: 250 },
-  { label: "Influencers Onboarded", value: 75 },
-  { label: "Ad Reach (in millions)", value: 5, isMillion: true },
+  { label: "Clients Served", value: 25 },
+  { label: "Campaigns Launched", value: 80 },
+  { label: "Influencers Onboarded", value: 50 },
+  { label: "Ad Reach (in millions)", value: 2, isMillion: true },
 ];
 
 const Stats = () => {
