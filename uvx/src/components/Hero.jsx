@@ -28,20 +28,21 @@ const HeroSection = () => {
             At UxV, we blend creativity and strategy to build marketing solutions that connect, convert, and captivate your audience.
           </p>
 
-          <div className="flex flex-col md:flex-row gap-4 md:gap-6">
-            <a
-              href="#contact"
-              className="bg-[#F4D03F] text-black font-semibold px-6 py-3 rounded-lg hover:bg-yellow-400 transition-all"
-            >
-              Get in Touch
-            </a>
-            <a
-              href="#services"
-              className="border border-[#F4D03F] text-[#F4D03F] font-medium px-6 py-3 rounded-lg hover:bg-[#F4D03F] hover:text-black transition-all"
-            >
-              Our Services
-            </a>
-          </div>
+          <div className="flex flex-col md:flex-row gap-4 md:gap-6 items-start">
+  <a
+    href="#contact"
+    className="inline-block w-auto bg-[#F4D03F] text-black font-semibold px-6 py-3 rounded-lg hover:bg-yellow-400 transition-all"
+  >
+    Get in Touch
+  </a>
+  <a
+    href="#services"
+    className="inline-block w-auto border border-[#F4D03F] text-[#F4D03F] font-medium px-6 py-3 rounded-lg hover:bg-[#F4D03F] hover:text-black transition-all"
+  >
+    Our Services
+  </a>
+</div>
+
         </div>
 
         {/* Right - Hero Image */}
