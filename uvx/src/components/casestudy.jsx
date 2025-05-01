@@ -1,6 +1,6 @@
 import KotakImage from "../assets/images/kotak-mahindra.webp";
-import PaytmImage from "../assets/images/Paytm-Logo.wine.webp";
-import BinanceImage from "../assets/images/Binance.webp";
+import PaytmImage from "../assets/images/paytmbanner33.jpg";
+import BinanceImage from "../assets/images/Binance33.png";
 import AngelOneImage from "../assets/images/AngelOne2.png";
 import UnivestImage from "../assets/images/univest4.png";
 import ZebpayImage from "../assets/images/Zebpay2.png";
@@ -51,17 +51,19 @@ export default function CaseStudies() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-3 gap-11">
           {caseStudies.map((caseStudy, index) => (
             <div
               key={index}
               className="bg-[#1C1C1C] rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all transform hover:scale-105"
             >
-              <img
-                src={caseStudy.image}
-                alt={caseStudy.client}
-                className="h-56 w-full object-cover"
-              />
+               <img
+  src={caseStudy.image}
+  alt={caseStudy.client}
+  className="w-full h-auto sm:h-48 md:h-56 object-cover max-h-56 overflow-hidden"
+/>
+
+             
               <div className="p-6">
                 <h3 className="text-2xl font-semibold text-white mb-3">{caseStudy.client}</h3>
                 <p className="text-[#B3B3B3] text-sm">{caseStudy.summary}</p>
