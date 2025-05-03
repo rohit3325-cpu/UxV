@@ -57,38 +57,48 @@ const ServicesSection = () => {
 
   return (
     <section
+      id="services"
       ref={ref}
-      className="relative h-[600vh] bg-cover bg-center bg-no-repeat text-white px-6 md:px-20 rounded-3xl"
+      className="relative h-[600vh] bg-cover bg-center bg-no-repeat text-white px-6 md:px-20"
       style={{
-        backgroundImage: 'url("/your-background-image.jpg")', // Your background image here
+        backgroundImage: 'url("/your-background-image.jpg")', // optional
       }}
+      
     >
-      {/* Sticky container */}
+      
+      {/* Sticky Container */}
       <div className="sticky top-0 h-screen flex flex-col items-center justify-center z-10">
         <h2 className="text-3xl md:text-7xl font-bold mb-8 font-['Clash Grotesk'] tracking-tight text-center text-white">
           Our <span className="text-red-500">Services</span>
         </h2>
 
-        <div className="relative w-full h-[50vh]">
+        <div className="relative w-full h-[60vh]">
           {services.map((service, index) => {
-            const start = index / services.length;
-            const end = (index + 1) / services.length;
+            const total = services.length;
+            const start = index / total;
+            const end = (index + 1) / total;
 
-            // Adjust the animation to make it slower
-            const y = useTransform(scrollYProgress, [start, end], [0, -80]); // Slow down the y transition
-            const scale = useTransform(scrollYProgress, [start, end], [1, 0.9]); // Slow down the scale transition
-            const opacity = useTransform(scrollYProgress, [start, end], [1, 0]); // Slow down the opacity transition
+            const y = useTransform(scrollYProgress, [start, end], [100, -100]);
+            const scale = useTransform(scrollYProgress, [start, end], [0.95, 1]);
+            const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
+            const rotate = useTransform(scrollYProgress, [start, end], [-10, 0]); // Tilt to straight
 
             return (
               <motion.div
                 key={index}
-                style={{ y, scale, opacity, zIndex: services.length - index }}
-                className="absolute inset-0 m-auto w-[300px] h-[420px] bg-red-600 bg-opacity-70 rounded-3xl shadow-xl 
-                           px-5 py-8 flex flex-col justify-center items-center text-center border border-[#333]"
+                style={{
+                  y,
+                  scale,
+                  opacity,
+                  rotate,
+                  zIndex: index + 1,
+                }}
+                className="absolute inset-0 m-auto w-[300px] h-[420px] bg-black/70 rounded-3xl shadow-2xl 
+                           px-6 py-8 flex flex-col justify-center items-center text-center border border-[#333] backdrop-blur-md"
               >
                 <div className="mb-4">{service.icon}</div>
                 <h3 className="text-2xl font-semibold mb-3">{service.title}</h3>
-                <p className="text-sm text-[#CCCCCC] max-w-[300px]">{service.description}</p>
+                <p className="text-sm text-gray-300 max-w-[280px]">{service.description}</p>
               </motion.div>
             );
           })}

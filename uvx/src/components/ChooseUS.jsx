@@ -57,7 +57,7 @@ const WhyChooseUs = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">
             <span className="text-5xl font-bold text-center relative inline-block after:block after:w-full after:h-[2px] after:bg-[#F4D03F] after:mt-2">
-              Why Choose <span className="text-[#F4D03F]">UvX</span>
+              Why Choose <span className="text-[#F4D03F]">UxV</span>
             </span>
           </h2>
           <p className="text-[#B3B3B3] text-lg max-w-2xl mx-auto">
