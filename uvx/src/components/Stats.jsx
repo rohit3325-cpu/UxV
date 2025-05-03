@@ -12,14 +12,14 @@ const stats = [
 
 const Stats = () => {
   const { ref, inView } = useInView({
-    triggerOnce: true, // Run only once
-    threshold: 0.3,     // 30% of the component must be visible
+    triggerOnce: true,
+    threshold: 0.3,
   });
 
   return (
     <section
       id="work"
-      className="bg-[#F5F5F5] text-[#1C1C1C] py-24 px-6 md:px-20" // Light Background
+      className="bg-[#0F0F0F] text-white py-24 px-6 md:px-20"
       ref={ref}
     >
       <div className="max-w-6xl mx-auto text-center space-y-12">
@@ -31,14 +31,10 @@ const Stats = () => {
           {stats.map((item, idx) => (
             <div key={idx} className="flex flex-col items-center space-y-2">
               <div className="text-4xl font-extrabold text-[#F4D03F]">
-                {inView ? (
-                  <CountUp end={item.value} duration={2.5} />
-                ) : (
-                  "0"
-                )}
+                {inView ? <CountUp end={item.value} duration={2.5} /> : "0"}
                 {item.isMillion && "M"}
               </div>
-              <p className="text-[#1C1C1C] text-sm text-center"> {/* Dark text for label */}
+              <p className="text-[#CCCCCC] text-sm text-center">
                 {item.label}
               </p>
             </div>
@@ -50,3 +46,5 @@ const Stats = () => {
 };
 
 export default Stats;
+
+

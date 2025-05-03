@@ -20,6 +20,12 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* In index.css or global.css */
+/* html,
+body {
+  overflow-x: hidden;
+} */
+
 
 a {
   font-weight: 500;
@@ -36,6 +42,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+
 }
 
 h1 {

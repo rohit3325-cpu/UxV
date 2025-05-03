@@ -6,7 +6,6 @@ import AngelOneImage from "../assets/images/angelbanner.webp";
 import UnivestImage from "../assets/images/univest.webp";
 import ZebpayImage from "../assets/images/Policybazaar_Logo.gif";
 
-
 const brands = [
   {
     name: "Kotak811",
@@ -38,44 +37,13 @@ const brands = [
     logo: ZebpayImage,
     link: "https://www.zebpay.com",
   },
-  {
-    name: "Kotak811",
-    logo: KotakImage,
-    link: "https://www.nike.com",
-  },
-  {
-    name: "Paytm Money",
-    logo: PaytmImage,
-    link: "https://www.paytm.com",
-  },
-  {
-    name: "Binance",
-    logo: BinanceImage,
-    link: "https://www.binance.com",
-  },
-  {
-    name: "AngelOne",
-    logo: AngelOneImage,
-    link: "https://www.angelone.com",
-  },
-  {
-    name: "Univest",
-    logo: UnivestImage,
-    link: "https://www.univest.com",
-  },
-  {
-    name: "Policybazaar",
-    logo: ZebpayImage,
-    link: "https://www.policybazaar.com",
-  },
- 
 ];
 
 const BrandBanner = () => {
   return (
-    <div className="w-screen overflow-hidden bg-[#F5F5F5] py-10">
-      <h2 className="text-center text-black text-2xl md:text-3xl font-semibold mb-6">
-          Brands We've Collaborated With
+    <div className="w-screen overflow-hidden bg-[#0F0F0F] py-10">
+      <h2 className="text-center text-white text-2xl md:text-3xl font-semibold mb-6">
+        Brands We've Collaborated With
       </h2>
 
       <div className="relative w-full overflow-x-hidden">
@@ -88,11 +56,13 @@ const BrandBanner = () => {
               rel="noopener noreferrer"
               className="flex-shrink-0"
             >
-              <img
-                src={brand.logo}
-                alt={brand.name}
-                className="h-16 w-auto object-contain mx-4 transition-transform duration-300 hover:scale-105"
-              />
+              <div className="bg-white p-2 rounded-lg shadow-md h-20 flex items-center justify-center">
+                <img
+                  src={brand.logo}
+                  alt={brand.name}
+                  className="h-16 w-auto object-contain"
+                />
+              </div>
             </a>
           ))}
         </div>
@@ -123,7 +93,6 @@ const BrandBanner = () => {
 };
 
 export default BrandBanner;
-
 
 
 

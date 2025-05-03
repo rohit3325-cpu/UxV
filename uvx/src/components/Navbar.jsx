@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Mail, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import NavLogo from "../assets/images/UxV_Full logo.png";
+import NavLogo from "../assets/images/uxv_big.png"; // replace as needed
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,34 +18,57 @@ const Navbar = () => {
 
   return (
     <>
-      <nav id="nav" className="w-full fixed top-0 left-0 z-50 bg-white/90 backdrop-blur-sm border-b border-[#F5F5F5]">
+      <nav
+  id="nav"
+  className="w-full max-w-full overflow-x-hidden fixed top-0 left-0 z-50 backdrop-blur-sm 
+             bg-gradient-to-r from-[#3B0A0A] via-[#0D0D0D] to-[#000000] 
+             border-b border-[#1F1F1F]"
+>
+
+
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
           {/* Logo Section */}
-          <div className="flex bd items-center gap-2">
-            <img src={NavLogo} alt="NavLogo" className="w-12 h-12  object-contain" />
+          <div className="flex items-center gap-2">
+            <img src={NavLogo} alt="NavLogo" className="w-13 h-12 object-contain" />
           </div>
 
           {/* Desktop Links */}
           <ul className="hidden md:flex gap-10 text-sm font-medium">
-            <li><Link smooth to="/#nav" className="text-[#1C1C1C] hover:text-[#F4D03F] transition">Home</Link></li>
-            <li><Link to="/about" className="text-[#1C1C1C] hover:text-[#F4D03F] transition">About</Link></li>
-            <li><HashLink smooth to="/#services" className="text-[#1C1C1C] hover:text-[#F4D03F] transition">Services</HashLink></li>
-            <li><HashLink smooth to="/#work" className="text-[#1C1C1C] hover:text-[#F4D03F] transition">Work</HashLink></li>
+            <li>
+              <Link smooth to="/#nav" className="text-[#F5F5F5] hover:text-[#F4D03F] transition">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="text-[#F5F5F5] hover:text-[#F4D03F] transition">
+                About
+              </Link>
+            </li>
+            <li>
+              <HashLink smooth to="/#services" className="text-[#F5F5F5] hover:text-[#F4D03F] transition">
+                Services
+              </HashLink>
+            </li>
+            <li>
+              <HashLink smooth to="/#work" className="text-[#F5F5F5] hover:text-[#F4D03F] transition">
+                Work
+              </HashLink>
+            </li>
           </ul>
 
           {/* Contact Button */}
           <HashLink
             smooth
             to="/#contact"
-            className="hidden md:flex items-center gap-2 bg-[#F4D03F] text-black px-5 py-2 rounded-lg font-semibold transition hover:scale-105 hover:bg-yellow-400"
+            className="hidden md:flex items-center gap-2 bg-[#F4D03F] text-black px-5 py-2 rounded-lg font-semibold transition hover:bg-yellow-400 hover:scale-105"
           >
             <Mail size={18} />
             Contact
           </HashLink>
 
           {/* Mobile Menu Button */}
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden bg-transparent text-black z-50">
+          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden bg-transparent text-[#F5F5F5] z-50">
             {isOpen ? <X size={28} /> : (
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -57,29 +80,27 @@ const Navbar = () => {
 
       {/* Fullscreen Sidebar */}
       <div
-        className={`fixed inset-0 bg-white z-40 transform ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        } transition-transform duration-300 ease-in-out flex flex-col md:hidden`}
+        className={`fixed inset-0 bg-[#000000]/80 z-40 transform ${isOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 ease-in-out flex flex-col md:hidden`}
       >
         {/* Close Button */}
         <div className="flex justify-end p-5">
-          <button onClick={() => setIsOpen(false)} className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition">
+          <button onClick={() => setIsOpen(false)} className="p-2 rounded-full bg-[#333333] hover:bg-[#444444] transition">
             <X size={24} />
           </button>
         </div>
 
         {/* Mobile Nav Links */}
-        <nav className="flex flex-col gap-6 text-lg font-medium px-8 pt-10 w-72">
-          <Link to="/" onClick={() => setIsOpen(false)} className="text-[#1C1C1C] hover:text-[#F4D03F] transition">
+        <nav className="flex flex-col gap-6 text-lg font-medium px-8 pt-10 w-72 text-[#F5F5F5]">
+          <Link to="/" onClick={() => setIsOpen(false)} className="hover:text-[#F4D03F] transition">
             Home
           </Link>
-          <Link to="/about" onClick={() => setIsOpen(false)} className="text-[#1C1C1C] hover:text-[#F4D03F] transition">
+          <Link to="/about" onClick={() => setIsOpen(false)} className="hover:text-[#F4D03F] transition">
             About
           </Link>
-          <HashLink smooth to="/#services" onClick={() => setIsOpen(false)} className="text-[#1C1C1C] hover:text-[#F4D03F] transition">
+          <HashLink smooth to="/#services" onClick={() => setIsOpen(false)} className="hover:text-[#F4D03F] transition">
             Services
           </HashLink>
-          <HashLink smooth to="/#work" onClick={() => setIsOpen(false)} className="text-[#1C1C1C] hover:text-[#F4D03F] transition">
+          <HashLink smooth to="/#work" onClick={() => setIsOpen(false)} className="hover:text-[#F4D03F] transition">
             Work
           </HashLink>
           <HashLink
@@ -98,7 +119,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
 
 
 

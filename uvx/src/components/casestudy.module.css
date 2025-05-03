@@ -1,0 +1,56 @@
+.card3D {
+    perspective: 1500px;
+    cursor: pointer;
+  }
+  
+  .cardInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    transform-style: preserve-3d;
+  }
+  
+  .cardFront,
+  .cardBack {
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Front side of the card */
+  .cardFront {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    background: #1c1c1c;
+    border-radius: 12px;
+  }
+  
+  /* Back side of the card */
+  .cardBack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F4D03F;
+    color: white;
+    border-radius: 12px;
+    transform: rotateY(180deg);
+  }
+  
+  /* Hover effect on the card */
+  .card3D:hover .cardInner {
+    transform: rotateY(180deg); /* Flip to the left */
+  }
+  
+  /* Additional flip effects */
+  .flip {
+    transform: rotateY(180deg);
+  }
+  
+  
+  
+  
