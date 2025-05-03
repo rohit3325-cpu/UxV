@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Mail, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import NavLogo from "../assets/images/uxv_big.png"; // replace as needed
+import NavLogo from "../assets/images/uxvtransparent.png"; // replace as needed
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

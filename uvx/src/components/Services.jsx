@@ -55,52 +55,47 @@ const ServicesSection = () => {
     offset: ["start start", "end end"],
   });
 
+  const totalCards = services.length;
+
   return (
     <section
       id="services"
       ref={ref}
-      className="relative h-[600vh] bg-[#0D0D0D] bg-center bg-no-repeat text-white px-6 md:px-20"
-      // style={{
-      //   backgroundImage: 'url("/your-background-image.jpg")', // optional
-      // }}
-      
+      className="relative h-[600vh] bg-[#0D0D0D] px-6 md:px-20"
     >
-      
-      {/* Sticky Container */}
       <div className="sticky top-0 h-screen flex flex-col items-center justify-center z-10">
         <h2 className="text-3xl md:text-7xl font-bold mb-8 font-['Clash Grotesk'] tracking-tight text-center text-white">
           Our <span className="text-red-500">Services</span>
         </h2>
-        <div className="absolute left-[-150px] top-1/2 transform -translate-y-1/2 w-[400px] h-[400px] bg-[#FF2C2C] opacity-30 blur-[150px] rounded-full z-0" />
 
+        <div className="absolute left-[-150px] top-1/2 transform -translate-y-1/2 w-[400px] h-[400px] bg-[#FF2C2C] opacity-30 blur-[150px] rounded-full z-0" />
 
         <div className="relative w-full h-[60vh]">
           {services.map((service, index) => {
-            const total = services.length;
-            const start = index / total;
-            const end = (index + 1) / total;
+            const start = index / totalCards;
+            const end = (index + 1) / totalCards;
 
-            const y = useTransform(scrollYProgress, [start, end], [100, -100]);
-            const scale = useTransform(scrollYProgress, [start, end], [0.95, 1]);
+            const y = useTransform(scrollYProgress, [start, end], [100, 0]);
             const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
-            const rotate = useTransform(scrollYProgress, [start, end], [-10, 0]); // Tilt to straight
+            const scale = useTransform(scrollYProgress, [start, end], [0.95, 1]);
 
             return (
               <motion.div
                 key={index}
                 style={{
                   y,
-                  scale,
                   opacity,
-                  rotate,
+                  scale,
                   zIndex: index + 1,
                 }}
                 className="absolute inset-0 m-auto w-[300px] h-[420px] bg-black/70 rounded-3xl shadow-2xl 
-                           px-6 py-8 flex flex-col justify-center items-center text-center border border-[#333] backdrop-blur-md"
+                px-6 py-8 flex flex-col justify-center items-center text-center border border-[#333] backdrop-blur-md"
               >
                 <div className="mb-4">{service.icon}</div>
                 <h3 className="text-2xl font-semibold mb-3">{service.title}</h3>
-                <p className="text-sm text-gray-300 max-w-[280px]">{service.description}</p>
+                <p className="text-sm text-gray-300 max-w-[280px]">
+                  {service.description}
+                </p>
               </motion.div>
             );
           })}
