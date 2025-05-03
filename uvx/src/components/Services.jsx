@@ -59,10 +59,10 @@ const ServicesSection = () => {
     <section
       id="services"
       ref={ref}
-      className="relative h-[600vh] bg-cover bg-center bg-no-repeat text-white px-6 md:px-20"
-      style={{
-        backgroundImage: 'url("/your-background-image.jpg")', // optional
-      }}
+      className="relative h-[600vh] bg-[#0D0D0D] bg-center bg-no-repeat text-white px-6 md:px-20"
+      // style={{
+      //   backgroundImage: 'url("/your-background-image.jpg")', // optional
+      // }}
       
     >
       
@@ -71,6 +71,8 @@ const ServicesSection = () => {
         <h2 className="text-3xl md:text-7xl font-bold mb-8 font-['Clash Grotesk'] tracking-tight text-center text-white">
           Our <span className="text-red-500">Services</span>
         </h2>
+        <div className="absolute left-[-150px] top-1/2 transform -translate-y-1/2 w-[400px] h-[400px] bg-[#FF2C2C] opacity-30 blur-[150px] rounded-full z-0" />
+
 
         <div className="relative w-full h-[60vh]">
           {services.map((service, index) => {
