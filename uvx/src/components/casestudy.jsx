@@ -19,27 +19,27 @@ export default function CaseStudies() {
   return (
     <section
       id="case-studies"
-      className="relative w-full py-32 px-6 md:px-12 text-white overflow-hidden"
+      className="relative w-full py-24 px-6 md:px-12 text-white overflow-hidden"
       style={{
         background: "radial-gradient(circle at top, #1C1C1C, #0D0D0D)",
       }}
     >
-      {/* Red glow background */}
+      {/* Red glow */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[600px] h-[400px] bg-[#FF2C2C] rounded-full blur-[200px] opacity-30 z-0" />
 
-      {/* Title and description */}
-      <div className="relative z-10 max-w-6xl mx-auto text-center mb-20">
+      {/* Heading */}
+      <div className="relative z-10 max-w-6xl mx-auto text-center mb-16">
         <h2 className="text-5xl font-extrabold mb-4">
           <span className="text-white">Case</span>{" "}
           <span className="text-[#F4D03F]">Studies</span>
         </h2>
         <p className="text-gray-400 text-lg">
-          Real brands, real results. See how UvX Media drives impact.
+          Real brands, real results. See how UxV Media drives impact.
         </p>
       </div>
 
-      {/* Revolving Circular Layout */}
-      <div className="relative z-10 w-full h-[400px] md:h-[500px] flex justify-center items-center overflow-visible">
+      {/* Rotating Layout */}
+      <div className="relative z-10 w-full h-[450px] flex justify-center items-center overflow-hidden">
         <div
           className="absolute w-full h-full flex justify-center items-center"
           style={{
@@ -48,29 +48,29 @@ export default function CaseStudies() {
         >
           {caseStudies.map((caseStudy, index) => {
             const angle = (index * 360) / caseStudies.length;
-
             return (
               <div
-                key={index}
-                className={`
-                  absolute 
-                  w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 
-                  bg-[#1A1A1A] rounded-full p-2 sm:p-3 md:p-4 
-                  shadow-xl hover:shadow-[#F4D03F]/30 
-                  transition duration-300 ease-in-out
-                `}
+              key={index}
+              className="absolute w-32 h-32 bg-[#1A1A1A] rounded-full p-3 shadow-xl hover:shadow-[#F4D03F]/30 transition duration-300 ease-in-out"
+              style={{
+                transform: `rotate(${angle}deg) translateX(160px)`,
+              }}
+            >
+              <div
+                className="w-full h-full overflow-hidden rounded-full bg-black flex items-center justify-center"
                 style={{
-                  transform: `rotate(${angle}deg) translateX(120px) rotate(-${angle}deg)`,
+                  transform: `rotate(-${angle}deg)`, // This keeps the logo upright
                 }}
               >
-                <div className="w-full h-full overflow-hidden rounded-full bg-black flex items-center justify-center">
-                  <img
-                    src={caseStudy.image}
-                    alt={`Case study image ${index + 1}`}
-                    className="h-full w-full object-contain"
-                  />
-                </div>
+                <img
+                  src={caseStudy.image}
+                  alt={`Case study image ${index + 1}`}
+                  className="w-full h-full object-contain"
+                />
               </div>
+            </div>
+            
+              
             );
           })}
         </div>
@@ -89,6 +89,5 @@ export default function CaseStudies() {
     </section>
   );
 }
-
 
 
