@@ -90,7 +90,6 @@
 //   );
 // }
 
-
 import React from "react";
 import KotakImage from "../assets/images/kotak-mahindra.webp";
 import PaytmImage from "../assets/images/paytmbanner33.jpg";
@@ -99,13 +98,21 @@ import AngelOneImage from "../assets/images/AngelOne2.png";
 import UnivestImage from "../assets/images/univest4.png";
 import ZebpayImage from "../assets/images/Zebpay2.png";
 
-const logos = [
+const logosUp = [
   KotakImage,
   PaytmImage,
   BinanceImage,
   AngelOneImage,
   UnivestImage,
   ZebpayImage,
+];
+const logosDown = [
+  ZebpayImage,
+  UnivestImage,
+  AngelOneImage,
+  BinanceImage,
+  PaytmImage,
+  KotakImage,
 ];
 
 const testimonials = [
@@ -149,25 +156,9 @@ export default function CaseStudies() {
         </p>
       </div>
 
-      {/* Content Grid */}
+      {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-        {/* Left Side – Logos Floating */}
-        <div className="flex flex-col items-center gap-10">
-          {logos.map((img, index) => (
-            <div
-              key={index}
-              className={`w-24 h-24 bg-[#1A1A1A] rounded-full p-3 shadow-lg hover:shadow-[#F4D03F]/40 transition duration-300 animate-float${(index % 3) + 1}`}
-            >
-              <img
-                src={img}
-                alt={`logo-${index}`}
-                className="w-full h-full object-contain rounded-full"
-              />
-            </div>
-          ))}
-        </div>
-
-        {/* Right Side – Testimonials */}
+        {/* Left - Testimonials */}
         <div className="space-y-6">
           {testimonials.map((item, idx) => (
             <div
@@ -186,50 +177,69 @@ export default function CaseStudies() {
             </div>
           ))}
         </div>
+
+        {/* Right - Dual Marquee */}
+        <div className="flex gap-8 h-[400px] overflow-hidden relative">
+          {/* Upward Logos */}
+          <div className="flex flex-col items-center animate-marquee-up">
+            {[...logosUp, ...logosUp].map((logo, idx) => (
+              <div
+                key={`up-${idx}`}
+                className="w-20 h-20 bg-[#1A1A1A] rounded-full p-3 shadow-md mb-6 flex items-center justify-center"
+              >
+                <img
+                  src={logo}
+                  alt={`logo-up-${idx}`}
+                  className="w-full h-full object-contain rounded-full"
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Downward Logos */}
+          <div className="flex flex-col items-center animate-marquee-down">
+            {[...logosDown, ...logosDown].map((logo, idx) => (
+              <div
+                key={`down-${idx}`}
+                className="w-20 h-20 bg-[#1A1A1A] rounded-full p-3 shadow-md mb-6 flex items-center justify-center"
+              >
+                <img
+                  src={logo}
+                  alt={`logo-down-${idx}`}
+                  className="w-full h-full object-contain rounded-full"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
-      {/* Floating Animations */}
+      {/* Animations */}
       <style jsx>{`
-        @keyframes float1 {
-          0%,
+        @keyframes marquee-up {
+          0% {
+            transform: translateY(0%);
+          }
           100% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-12px);
+            transform: translateY(-50%);
           }
         }
 
-        @keyframes float2 {
-          0%,
+        @keyframes marquee-down {
+          0% {
+            transform: translateY(0%);
+          }
           100% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-16px);
+            transform: translateY(50%);
           }
         }
 
-        @keyframes float3 {
-          0%,
-          100% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-10px);
-          }
+        .animate-marquee-up {
+          animation: marquee-up 20s linear infinite;
         }
 
-        .animate-float1 {
-          animation: float1 3.5s ease-in-out infinite;
-        }
-
-        .animate-float2 {
-          animation: float2 4s ease-in-out infinite;
-        }
-
-        .animate-float3 {
-          animation: float3 3s ease-in-out infinite;
+        .animate-marquee-down {
+          animation: marquee-down 20s linear infinite;
         }
       `}</style>
     </section>
