@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  ShieldCheck,
-  Brain,
-  Smile,
-  Sparkles,
-  Globe,
-  Rocket,
-} from "lucide-react";
+import { ShieldCheck, Brain, Smile, Sparkles, Globe, Rocket } from "lucide-react";
 
 const reasons = [
   {
@@ -69,9 +62,11 @@ const WhyChooseUs = () => {
           {reasons.map((item, idx) => (
             <div
               key={idx}
-              className="flex items-start gap-5 p-4 transition-transform duration-300 ease-in-out hover:scale-[1.02] hover:bg-[#1C1C1C] rounded-lg hover:shadow-[0_0_20px_#F4D03F40]"
+              className="flex items-start gap-5 p-4 transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-[#1C1C1C] rounded-lg hover:shadow-[0_0_20px_#F4D03F40] hover:rotate-3"
             >
-              <div>{item.icon}</div>
+              <div className="rounded-full p-4 bg-[#1C1C1C]">
+                {item.icon}
+              </div>
               <div>
                 <h4 className="text-xl font-semibold mb-2 text-white">
                   {item.title}
@@ -87,6 +82,7 @@ const WhyChooseUs = () => {
 };
 
 export default WhyChooseUs;
+
 
 
 
