@@ -90,8 +90,12 @@ const ServicesSection = () => {
 >
   {/* Background image layer */}
   <div
-    className="absolute inset-0 bg-[#111111] bg-[url('https://www.ixpap.com/images/2021/05/red-wallpaper-ixpap-7.jpg')] bg-cover bg-center z-0"
-  ></div>
+  className="absolute inset-0 bg-cover bg-center z-0"
+  style={{
+    backgroundImage: `url(${backimage})`,
+  }}
+/>
+
 
   {/* Foreground content */}
   <div className="relative z-10 w-full h-full px-6 py-8 flex flex-col justify-center items-center text-center backdrop-brightness-[.85]">
