@@ -13,6 +13,9 @@ const logos = [
   AngelOneImage,
   UnivestImage,
   ZebpayImage,
+  PaytmImage,
+  BinanceImage,
+  AngelOneImage,
 ];
 
 const testimonials = [
