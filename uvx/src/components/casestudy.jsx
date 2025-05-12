@@ -21,7 +21,7 @@ const logos = [
 const testimonials = [
   {
     logo: KotakImage,
-    name: "Kotak Mahindra",
+    name: "Kotak811",
     text: "UxV Media helped us 10x our digital outreach through creative influencer strategies.",
   },
   {
@@ -98,7 +98,7 @@ export default function CaseStudies() {
           {testimonials.map((item, idx) => (
             <div
               key={idx}
-              className="bg-[#1A1A1A] p-6 rounded-2xl shadow-md hover:shadow-[#F4D03F]/40 transition"
+              className="bg-[#1A1A1A] p-6 rounded-2xl shadow-md hover:shadow-[#F4D03F]/60 transition"
             >
               <div className="flex items-center mb-4 gap-4">
                 <img
@@ -135,11 +135,11 @@ export default function CaseStudies() {
         }
 
         .animate-up {
-          animation: moveUp 25s linear infinite;
+          animation: moveUp 15s linear infinite;
         }
 
         .animate-down {
-          animation: moveDown 25s linear infinite;
+          animation: moveDown 15s linear infinite;
         }
       `}</style>
     </section>
