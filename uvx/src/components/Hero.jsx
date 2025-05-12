@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import HeroImg from "../assets/images/home_logp.png"; // Update with your image path
+import HeroImg from "../assets/images/home_logo.png"; // Update with your image path
 import styles from "./Herosection.module.css";
 
 const HeroSection = () => {
