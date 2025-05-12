@@ -10,7 +10,7 @@ const brands = [
   {
     name: "Kotak811",
     logo: KotakImage,
-    link: "https://www.nike.com",
+    link: "https://www.kotak811.com",
   },
   {
     name: "Paytm Money",
