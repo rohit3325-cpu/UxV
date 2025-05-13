@@ -43,7 +43,7 @@ const HeroSection = () => {
             transition={{ duration: 1.5, delay: 1 }}
             className={`text-base sm:text-lg text-[#B3B3B3] max-w-md mx-auto md:mx-0 ${styles.typewriter}`}
           >
-            At <span className="font-semibold text-[#F4D03F]">UvX Media</span>,
+            At <span className="font-semibold text-[#F4D03F]">UxV Media</span>,
             When ideas align, outcomes <br /> multiply.
           </motion.p>
         </motion.div>
