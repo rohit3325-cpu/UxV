@@ -1,10 +1,10 @@
 import React from "react";
-import KotakImage from "../assets/images/kotakbanner.webp";
+import KotakImage from "../assets/images/transprentkotak.webp";
 import PaytmImage from "../assets/images/paytmbanner.webp";
 import BinanceImage from "../assets/images/binancebanner.webp";
 import AngelOneImage from "../assets/images/angelbanner.webp";
 import UnivestImage from "../assets/images/univest.webp";
-import ZebpayImage from "../assets/images/Policybazaar_Logo.gif";
+import ZebpayImage from "../assets/images/pbbanner.png";
 
 const brands = [
   {
@@ -56,7 +56,7 @@ const BrandBanner = () => {
               rel="noopener noreferrer"
               className="flex-shrink-0"
             >
-              <div className="bg-white p-2 rounded-lg shadow-md h-20 flex items-center justify-center">
+              <div className=" p-2 rounded-lg shadow-md h-20 flex items-center justify-center">
                 <img
                   src={brand.logo}
                   alt={brand.name}
