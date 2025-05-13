@@ -20,11 +20,7 @@ const ContactSection = () => {
           <div className="space-y-4 text-[#B3B3B3] text-sm">
             <p><strong className="text-white">Email:</strong> hi@uxvmedia.com</p>
             <p><strong className="text-white">Phone:</strong> +91 98701 00609</p>
-            <p>
-              <strong className="text-white">Location:</strong><br />
-              BMDI Creators Pvt Ltd<br />
-              13 (Basement) Vinoba Puri, Delhi - 110024
-            </p>
+            
           </div>
         </div>
 
