@@ -36,9 +36,10 @@ const Navbar = () => {
           {/* Desktop Links */}
           <ul className="hidden md:flex gap-10 text-sm font-medium">
             <li>
-              <Link smooth to="/#nav" className="text-[#F5F5F5] hover:text-[#F4D03F] transition">
-                Home
-              </Link>
+             <HashLink smooth to="/#home" className="text-[#F5F5F5] hover:text-[#F4D03F] transition">
+                   Home
+             </HashLink>
+
             </li>
             <li>
               <Link to="/about" className="text-[#F5F5F5] hover:text-[#F4D03F] transition">

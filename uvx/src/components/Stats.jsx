@@ -32,7 +32,7 @@ const Stats = () => {
             <div key={idx} className="flex flex-col items-center space-y-2">
               <div className="text-4xl font-extrabold text-[#F4D03F]">
                 {inView ? <CountUp end={item.value} duration={2.5} /> : "0"}
-                {item.isMillion && "M"}
+                {item.isMillion && "M+"}
               </div>
               <p className="text-[#CCCCCC] text-sm text-center">
                 {item.label}

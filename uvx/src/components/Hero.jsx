@@ -11,7 +11,8 @@ const HeroSection = () => {
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   return (
-    <section
+    <section 
+      id="home"
       ref={sectionRef}
       className="relative w-full min-h-screen bg-black text-white flex justify-center items-center overflow-hidden"
     >

@@ -62,7 +62,7 @@ const WhyChooseUs = () => {
           {reasons.map((item, idx) => (
             <div
               key={idx}
-              className="flex items-start gap-5 p-4 transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-[#1C1C1C] rounded-lg hover:shadow-[0_0_20px_#F4D03F40] hover:rotate-3"
+              className="flex items-start gap-5 p-4 transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-[#1C1C1C] rounded-lg hover:shadow-[0_0_20px_#F4D03F40] "
             >
               <div className="rounded-full p-4 bg-[#1C1C1C]">
                 {item.icon}
