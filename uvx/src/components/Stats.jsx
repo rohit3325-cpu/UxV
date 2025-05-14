@@ -30,10 +30,19 @@ const Stats = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((item, idx) => (
             <div key={idx} className="flex flex-col items-center space-y-2">
-              <div className="text-4xl font-extrabold text-[#F4D03F]">
-                {inView ? <CountUp end={item.value} duration={2.5} /> : "0"}
-                {item.isMillion && "M+"}
-              </div>
+             <div className="text-4xl font-extrabold text-[#F4D03F] flex items-baseline gap-1">
+  {inView ? (
+    <>
+      <CountUp end={item.value} duration={2.5} />
+      <span className="text-2xl align-super">
+        {item.isMillion ? "M+" : "+"}
+      </span>
+    </>
+  ) : (
+    "0"
+  )}
+</div>
+
               <p className="text-[#CCCCCC] text-sm text-center">
                 {item.label}
               </p>
