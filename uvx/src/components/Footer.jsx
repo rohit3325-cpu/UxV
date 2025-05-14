@@ -38,9 +38,9 @@ export default function Footer() {
         <h3 className="text-lg font-semibold mb-4 text-white">Stay Connected</h3>
         <p className="text-[#B3B3B3] mb-4 text-sm">Follow us for the latest insights:</p>
         <div className="flex justify-center md:justify-end gap-4 mb-4 text-[#F5F5F5]">
-          <a href="#" className="hover:text-[#F4D03F] transition"><Facebook size={20} /></a>
-          <a href="https://www.instagram.com/uxvmedia/" className="hover:text-[#F4D03F] transition"><Instagram size={20} /></a>
-          <a href="#" className="hover:text-[#F4D03F] transition"><Twitter size={20} /></a>
+          <a href="#" className="text-[#F4D03F] transition"><Facebook size={20} /></a>
+          <a href="https://www.instagram.com/uxvmedia/" className="text-[#F4D03F] transition"><Instagram size={20} /></a>
+          <a href="#" className="text-[#F4D03F] transition"><Twitter size={20} /></a>
         </div>
         <a
           href="https://wa.me/919870100609?text=Hi%20UvX%20Media!%20I'm%20interested%20in%20your%20services."

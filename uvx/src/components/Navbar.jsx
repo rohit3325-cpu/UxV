@@ -91,29 +91,50 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Nav Links */}
-        <nav className="flex flex-col gap-6 text-lg font-medium px-8 pt-10 w-72 text-[#F5F5F5]">
-          <HashLink smooth to="/#home" onClick={() => setIsOpen(false)} className="hover:text-[#F4D03F] transition">
-            Home
-          </HashLink>
-          <Link to="/about" onClick={() => setIsOpen(false)} className="hover:text-[#F4D03F] transition">
-            About
-          </Link>
-          <HashLink smooth to="/#services" onClick={() => setIsOpen(false)} className="hover:text-[#F4D03F] transition">
-            Services
-          </HashLink>
-          <HashLink smooth to="/#work" onClick={() => setIsOpen(false)} className="hover:text-[#F4D03F] transition">
-            Work
-          </HashLink>
-          <HashLink
-            smooth
-            to="/#contact"
-            onClick={() => setIsOpen(false)}
-            className="flex items-center gap-2 bg-[#F4D03F] text-black px-5 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition"
-          >
-            <Mail size={18} />
-            Contact
-          </HashLink>
-        </nav>
+           
+      <nav className="flex flex-col gap-4 px-8 pt-6 w-72 text-[#F5F5F5] font-semibold">
+         <HashLink       
+    smooth
+    to="/#home"
+    onClick={() => setIsOpen(false)}
+    className="flex items-center justify-center gap-2 bg-[#F4D03F] text-black px-5 py-3 rounded-lg hover:bg-yellow-400 transition"
+  >
+    Home
+         </HashLink>
+         <Link       
+    to="/about"
+    onClick={() => setIsOpen(false)}
+    className="flex items-center justify-center gap-2 bg-[#F4D03F] text-black px-5 py-3 rounded-lg hover:bg-yellow-400 transition"
+  >
+    About
+         </Link>
+         <HashLink       
+    smooth
+    to="/#services"
+    onClick={() => setIsOpen(false)}
+    className="flex items-center justify-center gap-2 bg-[#F4D03F] text-black px-5 py-3 rounded-lg hover:bg-yellow-400 transition"
+  >
+    Services
+         </HashLink>
+         <HashLink       
+    smooth
+    to="/#work"
+    onClick={() => setIsOpen(false)}
+    className="flex items-center justify-center gap-2 bg-[#F4D03F] text-black px-5 py-3 rounded-lg hover:bg-yellow-400 transition"
+  >
+    Work
+         </HashLink>
+         <HashLink
+    smooth
+    to="/#contact"
+    onClick={() => setIsOpen(false)}
+    className="flex items-center justify-center gap-2 bg-[#F4D03F] text-black px-5 py-3 rounded-lg hover:bg-yellow-400 transition"
+  >
+       <Mail size={18} />
+        Contact
+        </HashLink>
+     </nav>
+
       </div>
     </>
   );
