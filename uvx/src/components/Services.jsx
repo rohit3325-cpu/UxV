@@ -59,7 +59,7 @@ const ServicesSection = () => {
       className="relative h-[600vh] bg-[#0D0D0D] px-6 md:px-20"
     >
       <div className="sticky top-0 h-screen flex flex-col items-center justify-center z-10">
-        <h2 className="text-3xl md:text-7xl font-bold mb-8 text-center text-white font-['Clash Grotesk']">
+        <h2 className="text-5xl md:text-5xl font-bold mb-8 text-center text-white font-['Clash Grotesk']">
           Our <span className="text-red-500">Services</span>
         </h2>
 
