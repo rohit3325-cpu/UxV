@@ -29,14 +29,16 @@ const HeroSection = () => {
           transition={{ duration: 1.5, ease: "easeOut" }}
           className="space-y-6 hero-text"
         >
-          <motion.h1
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.5, delay: 0.3 }}
-            className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-snug text-[#F4D03F] tracking-wide max-w-xl"
-          >
-            Unlocking <span className="text-[#F4D03F]">Collaboration</span>
-          </motion.h1>
+        <motion.h1
+          initial={{ scale: 1.3, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
+          className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-snug text-[#F4D03F] tracking-wide max-w-xl"
+        >
+          Unlocking <span className="text-[#F4D03F]">Collaboration</span>
+        </motion.h1>
+        
+
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
