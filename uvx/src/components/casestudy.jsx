@@ -32,8 +32,8 @@ const CaseStudies = () => {
   return (
     <div className="w-screen overflow-hidden bg-[#0F0F0F] py-10">
       
-      <h2 className="text-4xl  text-center font-bold mb-4">
-            <span className="text-4xl font-bold text-center relative inline-block after:block after:w-full after:h-[2px] after:bg-[#F4D03F] after:mt-2">
+      <h2 className="text-5xl  text-center font-bold mb-4">
+            <span className="text-5xl font-bold text-center relative inline-block after:block after:w-full after:h-[2px] after:bg-[#F4D03F] after:mt-2">
               <span className="text-white">Brands</span> <span className="text-[#F4D03F]">collaborated</span>
             </span>
           </h2>
