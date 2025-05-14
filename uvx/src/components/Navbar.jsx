@@ -93,7 +93,7 @@ const Navbar = () => {
         {/* Mobile Nav Links */}
         <nav className="flex flex-col gap-6 text-lg font-medium px-8 pt-10 w-72 text-[#F5F5F5]">
           <HashLink smooth to="/#home" onClick={() => setIsOpen(false)} className="hover:text-[#F4D03F] transition">
-            Services
+            Home
           </HashLink>
           <Link to="/about" onClick={() => setIsOpen(false)} className="hover:text-[#F4D03F] transition">
             About
