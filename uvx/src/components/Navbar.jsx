@@ -92,48 +92,52 @@ const Navbar = () => {
 
         {/* Mobile Nav Links */}
            
-      <nav className="flex flex-col gap-4 px-8 pt-6 w-72 text-[#F5F5F5] font-semibold">
-         <HashLink       
+     {/* Mobile Nav Links */}
+{/* Mobile Nav Links */}
+<nav className="flex flex-col gap-4 px-8 pt-6 text-[#F5F5F5] font-semibold">
+  <HashLink
     smooth
     to="/#home"
     onClick={() => setIsOpen(false)}
-    className="flex items-center justify-center gap-2 bg-[#F4D03F] text-black px-5 py-3 rounded-lg hover:bg-yellow-400 transition"
+    className="flex items-center justify-center gap-2 w-44 bg-[#F4D03F] text-black px-5 py-2 rounded-lg hover:bg-yellow-400 transition"
   >
     Home
-         </HashLink>
-         <Link       
+  </HashLink>
+  <Link
     to="/about"
     onClick={() => setIsOpen(false)}
-    className="flex items-center justify-center gap-2 bg-[#F4D03F] text-black px-5 py-3 rounded-lg hover:bg-yellow-400 transition"
+    className="flex items-center justify-center gap-2 w-44 bg-[#F4D03F] text-black px-5 py-2 rounded-lg hover:bg-yellow-400 transition"
   >
     About
-         </Link>
-         <HashLink       
+  </Link>
+  <HashLink
     smooth
     to="/#services"
     onClick={() => setIsOpen(false)}
-    className="flex items-center justify-center gap-2 bg-[#F4D03F] text-black px-5 py-3 rounded-lg hover:bg-yellow-400 transition"
+    className="flex items-center justify-center gap-2 w-44 bg-[#F4D03F] text-black px-5 py-2 rounded-lg hover:bg-yellow-400 transition"
   >
     Services
-         </HashLink>
-         <HashLink       
+  </HashLink>
+  <HashLink
     smooth
     to="/#work"
     onClick={() => setIsOpen(false)}
-    className="flex items-center justify-center gap-2 bg-[#F4D03F] text-black px-5 py-3 rounded-lg hover:bg-yellow-400 transition"
+    className="flex items-center justify-center gap-2 w-44 bg-[#F4D03F] text-black px-5 py-2 rounded-lg hover:bg-yellow-400 transition"
   >
     Work
-         </HashLink>
-         <HashLink
+  </HashLink>
+  <HashLink
     smooth
     to="/#contact"
     onClick={() => setIsOpen(false)}
-    className="flex items-center justify-center gap-2 bg-[#F4D03F] text-black px-5 py-3 rounded-lg hover:bg-yellow-400 transition"
+    className="flex items-center justify-center gap-2 w-44 bg-[#F4D03F] text-black px-5 py-2 rounded-lg hover:bg-yellow-400 transition"
   >
-       <Mail size={18} />
-        Contact
-        </HashLink>
-     </nav>
+    <Mail size={18} />
+    Contact
+  </HashLink>
+</nav>
+
+
 
       </div>
     </>
