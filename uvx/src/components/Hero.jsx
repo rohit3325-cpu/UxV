@@ -17,9 +17,9 @@ const HeroSection = () => {
       className="relative w-full min-h-screen bg-black text-white flex justify-center items-center overflow-hidden"
     >
       {/* Background Gradient */}
-      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_70%_40%,rgba(255,76,76,0.12),rgba(244,208,63,0.08),#000000)]" />
+      {/* <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_70%_40%,rgba(255,76,76,0.12),rgba(244,208,63,0.08),#000000)]" />
       <div className="absolute w-[400px] h-[300px] bg-[#F4D03F]/20 rounded-full top-[-150px] right-[-150px] md:right-[-100px] blur-3xl z-0" />
-      <div className="absolute w-[400px] h-[300px] bg-[#FF4C4C]/15 rounded-full top-[150px] left-[-150px] md:left-[-100px] blur-3xl z-0" />
+      <div className="absolute w-[400px] h-[300px] bg-[#FF4C4C]/15 rounded-full top-[150px] left-[-150px] md:left-[-100px] blur-3xl z-0" /> */}
 
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-20 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-10 items-center relative z-10 text-center md:text-left">
         {/* Text Section */}
@@ -29,15 +29,49 @@ const HeroSection = () => {
           transition={{ duration: 1.5, ease: "easeOut" }}
           className="space-y-6 hero-text"
         >
-        <motion.h1
-          initial={{ scale: 1.3, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
-          className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-snug text-[#F4D03F] tracking-wide max-w-xl"
-        >
-          Unlocking <span className="text-[#F4D03F]">Collaboration</span>
-        </motion.h1>
-        
+
+
+<motion.h1
+  initial={{ scale: 1.3, opacity: 0 }}
+  animate={{ scale: 1, opacity: 1 }}
+  transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
+  className="text-4xl sm:text-5xl md:text-6xl leading-snug tracking-wide max-w-xl"
+  style={{ fontFamily: "'Kaushan Script', cursive", color: "white", fontWeight: "normal" }}
+>
+  Unlocking{" "}
+  <span className="relative inline-block text-[#F4D03F]">
+    Collaboration
+    <svg
+      className="absolute -bottom-4.5 right-[0%] -translate-x-0 w-[120px] md:w-[160px] h-auto"
+      viewBox="0 0 200 30"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <motion.path
+        d="M10 10 C60 0, 140 0, 190 10"
+        stroke="#F4D03F"
+        strokeWidth="5"
+        strokeLinecap="round"
+        initial={{ pathLength: 0 }}
+        animate={{ pathLength: 1 }}
+        transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
+      />
+      <motion.path
+        d="M10 20 C60 10, 140 10, 190 20"
+        stroke="#F4D03F"
+        strokeWidth="5"
+        strokeLinecap="round"
+        initial={{ pathLength: 0 }}
+        animate={{ pathLength: 1 }}
+        transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
+      />
+    </svg>
+  </span>
+</motion.h1>
+
+
+
+
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}

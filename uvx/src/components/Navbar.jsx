@@ -2,74 +2,102 @@ import React, { useState, useEffect } from "react";
 import { Mail, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import NavLogo from "../assets/images/uxvtransparent.png"; // replace as needed
+import { motion } from "framer-motion";
+import NavLogo from "../assets/images/uxvtransparent.png"; // adjust path if needed
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Lock scroll when sidebar is open
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
+
+  const linkVariants = {
+    hidden: { opacity: 0, y: -10 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.15,
+        duration: 0.4,
+        ease: "easeOut",
+      },
+    }),
+  };
+
+  const navLinks = [
+    { label: "Home", to: "/#home" },
+    { label: "About", to: "/about", isLink: true },
+    { label: "Services", to: "/#services" },
+    { label: "Work", to: "/#work" },
+  ];
 
   return (
     <>
       <nav
-  id="nav"
-  className="w-full max-w-full overflow-x-hidden fixed top-0 left-0 z-50 backdrop-blur-sm 
-             bg-gradient-to-r from-[#3B0A0A] via-[#0D0D0D] to-[#000000] 
-             border-b border-[#1F1F1F]"
->
-
-
+        id="nav"
+        className="fixed top-0 left-0 z-50 w-full backdrop-blur-md bg-black/30"
+      >
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-
-          {/* Logo Section */}
           <div className="flex items-center gap-2">
-            <img src={NavLogo} alt="NavLogo" className="w-13 h-12 object-contain" />
+            <img src={NavLogo} alt="Logo" className="w-13 h-12 object-contain" />
           </div>
 
-          {/* Desktop Links */}
-          <ul className="hidden md:flex gap-10 text-sm font-medium">
-            <li>
-             <HashLink smooth to="/#home" className="text-[#F5F5F5] hover:text-[#F4D03F] transition">
-                   Home
-             </HashLink>
-
-            </li>
-            <li>
-              <Link to="/about" className="text-[#F5F5F5] hover:text-[#F4D03F] transition">
-                About
+          {/* Desktop Nav */}
+{/* Desktop Nav inside a bordered box */}
+<div className="hidden md:flex items-center border border-white rounded-full px-3 py-1 bg-white/5 backdrop-blur-sm">
+  <ul className="flex gap-6 text-sm font-medium">
+    {navLinks.map((link, index) => {
+      return (
+        <motion.li
+          key={link.label}
+          custom={index}
+          initial="hidden"
+          animate="visible"
+          variants={linkVariants}
+        >
+          <div className="relative group overflow-hidden rounded-lg">
+            {/* Bubble animation */}
+            <motion.span
+              className="absolute inset-0 bg-white/30 rounded-full scale-0 group-hover:scale-100 opacity-20 transition-transform duration-500 ease-out origin-center"
+            />
+            {link.isLink ? (
+              <Link
+                to={link.to}
+                className="relative z-10 px-4 py-2 block text-white transition-colors duration-300 group-hover:text-yellow-400"
+              >
+                {link.label}
               </Link>
-            </li>
-            <li>
-              <HashLink smooth to="/#services" className="text-[#F5F5F5] hover:text-[#F4D03F] transition">
-                Services
+            ) : (
+              <HashLink
+                smooth
+                to={link.to}
+                className="relative z-10 px-4 py-2 block text-white transition-colors duration-300 group-hover:text-yellow-400"
+              >
+                {link.label}
               </HashLink>
-            </li>
-            <li>
-              <HashLink smooth to="/#work" className="text-[#F5F5F5] hover:text-[#F4D03F] transition">
-                Work
-              </HashLink>
-            </li>
-          </ul>
+            )}
+          </div>
+        </motion.li>
+      );
+    })}
+  </ul>
+</div>
+
+
 
           {/* Contact Button */}
           <HashLink
             smooth
             to="/#contact"
-            className="hidden md:flex items-center gap-2 bg-[#F4D03F] text-black px-5 py-2 rounded-lg font-semibold transition hover:bg-yellow-400 hover:scale-105"
+            className="hidden md:flex items-center gap-2 bg-[#F4D03F] text-black px-5 py-2 rounded-full font-semibold transition hover:bg-yellow-400 hover:scale-105"
           >
             <Mail size={18} />
             Contact
           </HashLink>
 
-          {/* Mobile Menu Button */}
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden bg-transparent text-[#F5F5F5] z-50">
+          {/* Mobile Toggle */}
+          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-white z-50">
             {isOpen ? <X size={28} /> : (
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -79,66 +107,58 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Fullscreen Sidebar */}
+      {/* Mobile Sidebar */}
       <div
-        className={`fixed inset-0 bg-[#000000]/80 z-40 transform ${isOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 ease-in-out flex flex-col md:hidden`}
+        className={`fixed inset-0 bg-black/80 z-40 transform ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        } transition-transform duration-300 ease-in-out flex flex-col md:hidden`}
       >
-        {/* Close Button */}
         <div className="flex justify-end p-5">
-          <button onClick={() => setIsOpen(false)} className="p-2 rounded-full bg-[#333333] hover:bg-[#444444] transition">
+          <button
+            onClick={() => setIsOpen(false)}
+            className="p-2 rounded-full bg-[#333] hover:bg-[#444] transition"
+          >
             <X size={24} />
           </button>
         </div>
 
-        {/* Mobile Nav Links */}
-           
-     {/* Mobile Nav Links */}
-{/* Mobile Nav Links */}
-<nav className="flex flex-col gap-4 px-8 pt-6 text-[#F5F5F5] font-semibold">
-  <HashLink
-    smooth
-    to="/#home"
-    onClick={() => setIsOpen(false)}
-    className="flex items-center justify-center gap-2 w-44 bg-[#F4D03F] text-black px-5 py-2 rounded-lg hover:bg-yellow-400 transition"
-  >
-    Home
-  </HashLink>
-  <Link
-    to="/about"
-    onClick={() => setIsOpen(false)}
-    className="flex items-center justify-center gap-2 w-44 bg-[#F4D03F] text-black px-5 py-2 rounded-lg hover:bg-yellow-400 transition"
-  >
-    About
-  </Link>
-  <HashLink
-    smooth
-    to="/#services"
-    onClick={() => setIsOpen(false)}
-    className="flex items-center justify-center gap-2 w-44 bg-[#F4D03F] text-black px-5 py-2 rounded-lg hover:bg-yellow-400 transition"
-  >
-    Services
-  </HashLink>
-  <HashLink
-    smooth
-    to="/#work"
-    onClick={() => setIsOpen(false)}
-    className="flex items-center justify-center gap-2 w-44 bg-[#F4D03F] text-black px-5 py-2 rounded-lg hover:bg-yellow-400 transition"
-  >
-    Work
-  </HashLink>
-  <HashLink
-    smooth
-    to="/#contact"
-    onClick={() => setIsOpen(false)}
-    className="flex items-center justify-center gap-2 w-44 bg-[#F4D03F] text-black px-5 py-2 rounded-lg hover:bg-yellow-400 transition"
-  >
-    <Mail size={18} />
-    Contact
-  </HashLink>
-</nav>
+        <nav className="flex flex-col gap-4 px-8 pt-6 text-white font-semibold">
+          {navLinks.map((link) => {
+            const mobileStyles =
+              "w-44 text-center px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white hover:text-yellow-400 transition";
 
+            return link.isLink ? (
+              <Link
+                key={link.label}
+                to={link.to}
+                onClick={() => setIsOpen(false)}
+                className={mobileStyles}
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <HashLink
+                key={link.label}
+                smooth
+                to={link.to}
+                onClick={() => setIsOpen(false)}
+                className={mobileStyles}
+              >
+                {link.label}
+              </HashLink>
+            );
+          })}
 
-
+          <HashLink
+            smooth
+            to="/#contact"
+            onClick={() => setIsOpen(false)}
+            className="w-44 text-center px-4 py-2 rounded-lg bg-[#F4D03F] text-black hover:bg-yellow-400 transition"
+          >
+            <Mail size={18} className="inline-block mr-2" />
+            Contact
+          </HashLink>
+        </nav>
       </div>
     </>
   );

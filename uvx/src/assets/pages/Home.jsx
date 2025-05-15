@@ -38,7 +38,7 @@ const Home = () => {
         <ServicesSection />
       </div>
 
-      <div className="bg-[#F4D03F] w-screen h-px bg-[#1C1C1C]"></div>
+      {/* <div className="bg-[#F4D03F] w-screen h-px bg-[#1C1C1C]"></div> */}
 
       <Stats />
       

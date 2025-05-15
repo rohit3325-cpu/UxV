@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutSection = () => {
   return (
-    <section className="w-screen min-h-screen bg-[#1A1A1A] text-white pt-24 pb-16 px-6 md:px-20">
+    <section className="w-screen min-h-screen bg-black text-white pt-24 pb-16 px-6 md:px-20">
       <div className="max-w-7xl mx-auto space-y-16">
         
         {/* Intro Section */}

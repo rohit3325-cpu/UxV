@@ -1,5 +1,6 @@
 import React from "react";
 import { ShieldCheck, Brain, Smile, Sparkles, Globe, Rocket } from "lucide-react";
+import { motion } from "framer-motion";
 
 const reasons = [
   {
@@ -48,11 +49,43 @@ const WhyChooseUs = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">
-            <span className="text-5xl font-bold text-center relative inline-block after:block after:w-full after:h-[2px] after:bg-[#F4D03F] after:mt-2">
-              Why Choose <span className="text-[#F4D03F]">UxV</span>
-            </span>
-          </h2>
+          <motion.h2
+        initial={{ scale: 1.3, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
+        className="text-4xl sm:text-5xl md:text-6xl leading-snug tracking-wide text-center mb-12"
+        style={{ fontFamily: "'Kaushan Script', cursive", color: "white", fontWeight: "normal" }}
+      >
+        Why Choose{" "}
+        <span className="relative inline-block text-[#F4D03F]">
+          UxV
+          <svg
+            className="absolute -bottom-4.5 left-[50%] -translate-x-1/2 w-[120px] md:w-[160px] h-auto"
+            viewBox="0 0 200 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <motion.path
+              d="M10 10 C60 0, 140 0, 190 10"
+              stroke="#F4D03F"
+              strokeWidth="5"
+              strokeLinecap="round"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
+            />
+            <motion.path
+              d="M10 20 C60 10, 140 10, 190 20"
+              stroke="#F4D03F"
+              strokeWidth="5"
+              strokeLinecap="round"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
+            />
+          </svg>
+        </span>
+      </motion.h2>
           <p className="text-[#B3B3B3] text-lg max-w-2xl mx-auto">
             We're not just another agency — we're your edge in a noisy digital world.
           </p>

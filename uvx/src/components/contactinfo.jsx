@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const ContactSection = () => {
   return (
@@ -10,9 +11,46 @@ const ContactSection = () => {
         
         {/* Left Side - Info */}
         <div>
-          <h2 className="text-4xl font-bold mb-6 font-['Clash Grotesk']">
-            Get in <span className="text-[#F4D03F]">Touch</span>
-          </h2>
+         
+
+<motion.h2
+  initial={{ scale: 1.3, opacity: 0 }}
+  animate={{ scale: 1, opacity: 1 }}
+  transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
+  className="text-3xl sm:text-5xl md:text-6xl leading-snug tracking-wide mb-6 font-normal"
+  style={{ fontFamily: "'Kaushan Script', cursive", color: "white" }}
+>
+  Get in{" "}
+  <span className="relative inline-block text-[#F4D03F]">
+    Touch
+    <svg
+      className="absolute -bottom-4.5 right-[3%] -translate-x-0 w-[120px] md:w-[160px] h-auto"
+      viewBox="0 0 200 30"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <motion.path
+        d="M10 10 C60 0, 140 0, 190 10"
+        stroke="#F4D03F"
+        strokeWidth="5"
+        strokeLinecap="round"
+        initial={{ pathLength: 0 }}
+        animate={{ pathLength: 1 }}
+        transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
+      />
+      <motion.path
+        d="M10 20 C60 10, 140 10, 190 20"
+        stroke="#F4D03F"
+        strokeWidth="5"
+        strokeLinecap="round"
+        initial={{ pathLength: 0 }}
+        animate={{ pathLength: 1 }}
+        transition={{ duration: 1.2, ease: "easeInOut", delay: 1.2 }}
+      />
+    </svg>
+  </span>
+</motion.h2>
+
           <p className="text-[#B3B3B3] mb-6 text-sm">
             Have a project in mind? We'd love to hear from you. Fill out the form and we'll get back to you soon.
           </p>
