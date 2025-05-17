@@ -9,6 +9,14 @@ html {
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: 'Northwell';
+  src: url('./fonts/Northwell.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

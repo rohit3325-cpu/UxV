@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import HeroImg from "../assets/images/home_logo.png";
-import styles from "./Herosection.module.css";
+import HeroImg from "../assets/images/x_logo.png";
+import styles from "./Herosection.module.css"; // Ensure this includes @font-face for Northwell
 
 const HeroSection = () => {
   const sectionRef = useRef(null);
@@ -11,77 +11,60 @@ const HeroSection = () => {
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   return (
-    <section 
+    <section
       id="home"
       ref={sectionRef}
       className="relative w-full min-h-screen bg-black text-white flex justify-center items-center overflow-hidden"
     >
-      {/* Background Gradient */}
-      {/* <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_70%_40%,rgba(255,76,76,0.12),rgba(244,208,63,0.08),#000000)]" />
-      <div className="absolute w-[400px] h-[300px] bg-[#F4D03F]/20 rounded-full top-[-150px] right-[-150px] md:right-[-100px] blur-3xl z-0" />
-      <div className="absolute w-[400px] h-[300px] bg-[#FF4C4C]/15 rounded-full top-[150px] left-[-150px] md:left-[-100px] blur-3xl z-0" /> */}
-
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-20 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-10 items-center relative z-10 text-center md:text-left">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-24 md:py-32 grid grid-cols-1 md:grid-cols-2 gap-10 items-center relative z-10 text-center md:text-left">
         {/* Text Section */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          className="space-y-6 hero-text"
+          className="space-y-8 hero-text"
         >
-
-
-<motion.h1
-  initial={{ scale: 1.3, opacity: 0 }}
-  animate={{ scale: 1, opacity: 1 }}
-  transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
-  className="text-4xl sm:text-5xl md:text-6xl leading-snug tracking-wide max-w-xl"
-  style={{ fontFamily: "'Kaushan Script', cursive", color: "white", fontWeight: "normal" }}
->
-  Unlocking{" "}
-  <span className="relative inline-block text-[#F4D03F]">
-    Collaboration
-    <svg
-      className="absolute -bottom-4.5 right-[0%] -translate-x-0 w-[120px] md:w-[160px] h-auto"
-      viewBox="0 0 200 30"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <motion.path
-        d="M10 10 C60 0, 140 0, 190 10"
-        stroke="#F4D03F"
-        strokeWidth="5"
-        strokeLinecap="round"
-        initial={{ pathLength: 0 }}
-        animate={{ pathLength: 1 }}
-        transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
-      />
-      <motion.path
-        d="M10 20 C60 10, 140 10, 190 20"
-        stroke="#F4D03F"
-        strokeWidth="5"
-        strokeLinecap="round"
-        initial={{ pathLength: 0 }}
-        animate={{ pathLength: 1 }}
-        transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
-      />
-    </svg>
-  </span>
-</motion.h1>
-
-
-
-
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, delay: 1 }}
-            className={`text-base sm:text-lg text-[#B3B3B3] max-w-md mx-auto md:mx-0 ${styles.typewriter}`}
+          <motion.h1
+            initial={{ scale: 1.3, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
+            className="text-5xl sm:text-6xl md:text-7xl leading-tight tracking-wide max-w-xl"
+            style={{
+              fontFamily: "Northwell, cursive",
+              color: "white",
+              fontWeight: "normal",
+            }}
           >
-            At <span className="font-semibold text-[#F4D03F]">UxV Media</span>,
-            When ideas align, outcomes <br /> multiply.
-          </motion.p>
+            Unlocking{" "}
+            <span className="relative inline-block text-[#F4D03F]">
+              Collaborations
+              <svg
+                className="absolute -bottom-6 left-[62%] -translate-x-0 w-[140px] md:w-[180px] h-auto"
+                viewBox="0 0 200 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <motion.path
+                  d="M10 10 C60 0, 140 0, 190 10"
+                  stroke="#F4D03F"
+                  strokeWidth="5"
+                  strokeLinecap="round"
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
+                />
+                <motion.path
+                  d="M10 20 C60 10, 140 10, 190 20"
+                  stroke="#F4D03F"
+                  strokeWidth="5"
+                  strokeLinecap="round"
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
+                />
+              </svg>
+            </span>
+          </motion.h1>
         </motion.div>
 
         {/* Hero Image */}
@@ -95,26 +78,28 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.5, delay: 0.7 }}
-            className="absolute w-[500px] h-[500px] rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(255,76,76,0.35)_0%,_rgba(244,208,63,0.2)_50%,_transparent_100%)] blur-[80px] z-0"
+            className="absolute w-[500px] h-[500px] rounded-full  z-0"
           />
-          <div className="absolute w-[300px] h-[100px] bg-[#F4D03F]/20 rounded-full bottom-[-40px] blur-3xl z-0" />
+          {/* <div className="absolute w-[300px] h-[100px]  rounded-full bottom-[-40px] blur-3xl z-0" /> */}
 
           <motion.img
-            src={HeroImg}
-            alt="Hero Logo"
-            style={{ scale, opacity }}
-            className="relative z-10 max-w-full h-auto drop-shadow-[0_10px_25px_rgba(0,0,0,0.4)] rounded-xl"
-          />
+  src={HeroImg}
+  alt="Hero Logo"
+  style={{ scale, opacity }}
+  className="relative z-10 max-w-full h-auto drop-shadow-[0_10px_25px_rgba(0,0,0,0.4)]"
+/>
+
         </motion.div>
       </div>
 
       {/* Bottom Fade */}
-      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-b from-transparent to-black z-[5]" />
+      {/* <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-b from-transparent to-black z-[5]" /> */}
     </section>
   );
 };
 
 export default HeroSection;
+
 
 
 

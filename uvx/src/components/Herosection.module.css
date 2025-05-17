@@ -20,5 +20,11 @@
   animation: typing 3s steps(40, end) forwards;
 }
 
+@font-face {
+  font-family: 'Northwell';
+  src: url('../fonts/Northwell.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
   

@@ -69,13 +69,13 @@ const ServicesSection = () => {
                animate={{ scale: 1, opacity: 1 }}
                transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
                className="text-4xl sm:text-5xl md:text-6xl leading-snug tracking-wide text-center mb-12"
-               style={{ fontFamily: "'Kaushan Script', cursive", color: "white", fontWeight: "normal" }}
+               style={{ fontFamily: "'Northwell', cursive", color: "white", fontWeight: "normal" }}
              >
                Our {" "}
                <span className="relative inline-block text-red-500">
                  Services
                  <svg
-                   className="absolute -bottom-4.5 left-[50%] -translate-x-1/2 w-[120px] md:w-[160px] h-auto"
+                   className="absolute -bottom-4.5 left-[68%] -translate-x-1/2 w-[120px] md:w-[160px] h-auto"
                    viewBox="0 0 200 30"
                    fill="none"
                    xmlns="http://www.w3.org/2000/svg"

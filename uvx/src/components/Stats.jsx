@@ -31,7 +31,7 @@ const Stats = () => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
           className="text-4xl sm:text-5xl md:text-6xl leading-snug tracking-wide text-center"
-          style={{ fontFamily: "'Kaushan Script', cursive", color: "white", fontWeight: "normal" }}
+          style={{ fontFamily: "'Northwell', cursive", color: "white", fontWeight: "normal" }}
         >
           Our impact in{" "}
           <span className="relative inline-block text-[#F4D03F]">

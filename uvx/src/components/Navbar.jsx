@@ -90,10 +90,10 @@ const Navbar = () => {
           <HashLink
             smooth
             to="/#contact"
-            className="hidden md:flex items-center gap-2 bg-[#F4D03F] text-black px-5 py-2 rounded-full font-semibold transition hover:bg-yellow-400 hover:scale-105"
+              className="hidden md:flex items-center gap-2 border border-white rounded-full px-4 py-2 bg-white/10 backdrop-blur-sm text-white font-medium transition hover:text-yellow-400 hover:bg-white/20"
           >
             <Mail size={18} />
-            Contact
+            Let's Connect
           </HashLink>
 
           {/* Mobile Toggle */}

@@ -18,7 +18,7 @@ const ContactSection = () => {
   animate={{ scale: 1, opacity: 1 }}
   transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
   className="text-3xl sm:text-5xl md:text-6xl leading-snug tracking-wide mb-6 font-normal"
-  style={{ fontFamily: "'Kaushan Script', cursive", color: "white" }}
+  style={{ fontFamily: "'Northwell', cursive", color: "white", fontWeight: "normal" }}
 >
   Get in{" "}
   <span className="relative inline-block text-[#F4D03F]">
