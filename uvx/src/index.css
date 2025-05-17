@@ -11,7 +11,7 @@ html {
 
 @font-face {
   font-family: 'Northwell';
-  src: url('./fonts/Northwell.ttf') format('truetype');
+  src: url('/fonts/Northwell.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
