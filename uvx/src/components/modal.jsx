@@ -1,64 +1,87 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
 
 const Modal = ({ isOpen, onClose, creators, title }) => {
-  if (!isOpen) return null;
+  const [animateIn, setAnimateIn] = useState(false);
 
-  const cardVariants = {
-    left: { hidden: { opacity: 0, x: -100 }, visible: { opacity: 1, x: 0 } },
-    bottom: { hidden: { opacity: 0, y: 100 }, visible: { opacity: 1, y: 0 } },
-    right: { hidden: { opacity: 0, x: 100 }, visible: { opacity: 1, x: 0 } },
-  };
+  useEffect(() => {
+    if (isOpen) {
+      setAnimateIn(false);
+      const timer = setTimeout(() => setAnimateIn(true), 50);
+      return () => clearTimeout(timer);
+    } else {
+      setAnimateIn(false);
+    }
+  }, [isOpen]);
+
+  if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90">
-      <div className="bg-black w-full max-w-6xl rounded-2xl p-8 text-white relative shadow-2xl overflow-y-auto max-h-[90vh]">
-
-        {/* Modal main heading (dynamic based on service clicked) */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-red-500">
+      <div className="bg-black w-full max-w-7xl h-[95vh] rounded-2xl p-8 text-white relative shadow-2xl overflow-y-auto">
+        {/* Centered Title */}
+        <h2 className="absolute top-10 left-1/2 transform -translate-x-1/2 text-4xl md:text-5xl font-bold text-red-500 z-10">
           {title}
         </h2>
 
-        {/* Card Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-4">
-
+        {/* U-Shaped Layout with Tilted Cards */}
+        <div
+          className={`relative flex gap-6 px-6 mt-40
+            flex-col items-center
+            md:flex-row md:justify-between md:items-start
+          `}
+        >
           {creators.map((creator, index) => {
-            let variant = "bottom"; // Default
-            if (index === 0) variant = "left";
-            else if (index === 3) variant = "right";
+            let positionClass = "";
+            let rotationClass = "";
+
+            // U-shaped layout and tilt only on desktop
+            if (index === 0 || index === 3) {
+              positionClass = "md:translate-y-0";
+            } else if (index === 1 || index === 2) {
+              positionClass = "md:translate-y-24";
+            }
+
+            if (index === 0) rotationClass = "md:-rotate-[5deg]";
+            if (index === 1) rotationClass = "md:-rotate-[2deg]";
+            if (index === 2) rotationClass = "md:rotate-[2deg]";
+            if (index === 3) rotationClass = "md:rotate-[5deg]";
 
             return (
-              <motion.div
+              <div
                 key={index}
-                variants={cardVariants[variant]}
-                initial="hidden"
-                animate="visible"
-                transition={{ duration: 0.7, delay: index * 0.2 }}
-                className="bg-[#2C2C2C] p-3 rounded-xl shadow-lg hover:scale-105 transition-transform"
                 style={{
-                  boxShadow: "0 0 15px 4px rgba(255, 0, 0, 0.8)", // red glow
+                  transform: animateIn ? "translateY(0)" : "translateY(20px)",
+                  opacity: animateIn ? 1 : 0,
+                  transition: "transform 0.5s ease, opacity 0.5s ease",
+                  transitionDelay: `${index * 100}ms`,
                 }}
+                className={`
+                  w-full md:w-[22%]
+                `}
               >
-                {/* Heading for each card: Use creator.service or fallback to modal title */}
-                {/* <h3 className="text-xl font-bold text-red-500 mb-2 text-center">
-                  {creator.service || creator.title || title || "Service Name"}
-                </h3> */}
-
-                {creator.video ? (
-                  <video
-                    src={creator.video}
-                    controls
-                    className="w-full h-[300px] object-cover rounded-md"
-                  />
-                ) : (
-                  <img
-                    src={creator.image}
-                    alt={creator.name}
-                    className="w-full h-[300px] object-cover rounded-md"
-                  />
-                )}
-                <p className="text-center mt-3 text-red-500 font-semibold">{creator.name}</p>
-              </motion.div>
+                <div
+                  className={`bg-[#1a1a1a] p-3 rounded-xl shadow-md
+                    ${positionClass} ${rotationClass}
+                  `}
+                >
+                  {creator.video ? (
+                    <video
+                      src={creator.video}
+                      controls
+                      className="w-full h-[300px] object-cover rounded-md"
+                    />
+                  ) : (
+                    <img
+                      src={creator.image}
+                      alt={creator.name}
+                      className="w-full h-[300px] object-cover rounded-md"
+                    />
+                  )}
+                  <p className="text-center mt-2 text-red-400 font-semibold text-sm">
+                    {creator.name}
+                  </p>
+                </div>
+              </div>
             );
           })}
         </div>
@@ -77,5 +100,12 @@ const Modal = ({ isOpen, onClose, creators, title }) => {
 };
 
 export default Modal;
+
+
+
+
+
+
+
 
 

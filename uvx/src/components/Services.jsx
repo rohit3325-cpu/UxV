@@ -8,7 +8,7 @@ import {
   TrendingUp,
   Megaphone,
 } from "lucide-react";
-import Modal from "./modal"; // adjust if path is different
+import Modal from "./modal"; // Make sure path is correct
 
 const services = [
   {
@@ -16,59 +16,55 @@ const services = [
     description: "We connect your brand with top influencers...",
     icon: <Users size={28} className="text-[#F4D03F]" />,
     topCreators: [
-  { name: "@creator1", image: backimage },
-  { name: "@creator2", image: backimage } ,
-   { name: "@creator2", image: backimage },
-  { name: "@creator3", image: backimage }
-    ]
+      { name: "@creator1", image: backimage },
+      { name: "@creator2", image: backimage },
+      { name: "@creator2", image: backimage },
+      { name: "@creator3", image: backimage },
+    ],
   },
   {
     title: "Talent Management",
     description: "We define your brand's voice and manage talent...",
     icon: <Rocket size={28} className="text-[#F4D03F]" />,
     topCreators: [
-  { name: "@creator1", image: "/images/creator1.jpg" },
-  { name: "@creator2", image: "/images/creator2.jpg" },
-   { name: "@creator2", image: "/images/creator2.jpg" },
-  { name: "@creator3", image: "/images/creator3.jpg" }
-]
-
+      { name: "@creator1", image: "/images/creator1.jpg" },
+      { name: "@creator2", image: "/images/creator2.jpg" },
+      { name: "@creator2", image: "/images/creator2.jpg" },
+      { name: "@creator3", image: "/images/creator3.jpg" },
+    ],
   },
   {
     title: "Content Creation",
     description: "From ideation to execution, we create engaging content...",
     icon: <LayoutDashboard size={28} className="text-[#F4D03F]" />,
     topCreators: [
-  { name: "@creator1", image: "/images/creator1.jpg" },
-  { name: "@creator2", image: "/images/creator2.jpg" },
-   { name: "@creator2", image: "/images/creator2.jpg" },
-  { name: "@creator3", image: "/images/creator3.jpg" }
-]
-
+      { name: "@creator1", image: "/images/creator1.jpg" },
+      { name: "@creator2", image: "/images/creator2.jpg" },
+      { name: "@creator2", image: "/images/creator2.jpg" },
+      { name: "@creator3", image: "/images/creator3.jpg" },
+    ],
   },
   {
     title: "Podcast Management",
     description: "We help you create, manage, and grow your podcast...",
     icon: <TrendingUp size={28} className="text-[#F4D03F]" />,
     topCreators: [
-  { name: "@creator1", image: "/images/creator1.jpg" },
-  { name: "@creator2", image: "/images/creator2.jpg" },
-   { name: "@creator2", image: "/images/creator2.jpg" },
-  { name: "@creator3", image: "/images/creator3.jpg" }
-]
-
+      { name: "@creator1", image: "/images/creator1.jpg" },
+      { name: "@creator2", image: "/images/creator2.jpg" },
+      { name: "@creator2", image: "/images/creator2.jpg" },
+      { name: "@creator3", image: "/images/creator3.jpg" },
+    ],
   },
   {
     title: "Video Editing",
     description: "Our full-service video editing enhances storytelling...",
     icon: <Megaphone size={28} className="text-[#F4D03F]" />,
-   topCreators: [
-  { name: "@creator1", image: "/images/creator1.jpg" },
-  { name: "@creator2", image: "/images/creator2.jpg" },
-   { name: "@creator2", image: "/images/creator2.jpg" },
-  { name: "@creator3", image: "/images/creator3.jpg" }
-]
-
+    topCreators: [
+      { name: "@creator1", image: "/images/creator1.jpg" },
+      { name: "@creator2", image: "/images/creator2.jpg" },
+      { name: "@creator2", image: "/images/creator2.jpg" },
+      { name: "@creator3", image: "/images/creator3.jpg" },
+    ],
   },
 ];
 
@@ -163,10 +159,11 @@ const ServicesSection = () => {
                 style={{ y, opacity, scale, rotate, zIndex }}
                 className="absolute flex flex-col md:flex-row items-center justify-center gap-6"
               >
-                
-
-                {/* Center Card */}
-                <div className="w-[320px] h-[440px] rounded-3xl overflow-hidden shadow-2xl border border-[#333] text-white relative">
+                {/* Entire card is clickable now */}
+                <div
+                  onClick={() => openModal(service.topCreators, service.title)}
+                  className="cursor-pointer w-[320px] h-[440px] rounded-3xl overflow-hidden shadow-2xl border border-[#333] text-white relative transition-transform duration-300 hover:scale-105"
+                >
                   <div
                     className="absolute inset-0 bg-cover bg-center z-0"
                     style={{ backgroundImage: `url(${backimage})` }}
@@ -179,15 +176,6 @@ const ServicesSection = () => {
                     <p className="text-sm text-gray-300">
                       {service.description}
                     </p>
-
-                    <button
-                      onClick={() =>
-                        openModal(service.topCreators, service.title)
-                      }
-                      className="mt-5 px-4 py-2 bg-red-500 text-black font-medium rounded-full hover:bg-yellow-400 transition duration-300"
-                    >
-                      Top Creators
-                    </button>
                   </div>
                 </div>
               </motion.div>
@@ -196,7 +184,7 @@ const ServicesSection = () => {
         </div>
       </div>
 
-      {/* Modal */}
+      {/* Modal Component */}
       <Modal
         isOpen={modalData.open}
         onClose={closeModal}
@@ -208,7 +196,6 @@ const ServicesSection = () => {
 };
 
 export default ServicesSection;
-
 
 
 
