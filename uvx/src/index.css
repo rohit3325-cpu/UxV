@@ -11,10 +11,11 @@ html {
 
 @font-face {
   font-family: 'Northwell';
-  src: url('/fonts/Northwell.woff2') format('woff2');
+  src: url('./assets/Fonts/Northwell.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
 
 
 :root {

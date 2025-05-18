@@ -16,6 +16,9 @@ export default {
         glow: '0 0 10px #F4D03F, 0 0 20px #F4D03F, 0 0 30px #F4D03F',
         redGlow: '0 0 10px red, 0 0 20px red, 0 0 30px red', // Add a red shadow option
       },
+       fontFamily: {
+        northwell: ['Northwell', 'cursive'],
+      },
     },
   },
   plugins: [

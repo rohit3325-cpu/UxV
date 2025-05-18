@@ -37,7 +37,7 @@ const Stats = () => {
           <span className="relative inline-block text-[#F4D03F]">
             numbers
             <svg
-              className="absolute -bottom-4.5 left-[60%] -translate-x-1/2 w-[120px] md:w-[160px] h-auto"
+              className="absolute -bottom-4 left-[50%] -translate-x-1/2 w-[120px] md:w-[160px] h-auto"
               viewBox="0 0 200 30"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

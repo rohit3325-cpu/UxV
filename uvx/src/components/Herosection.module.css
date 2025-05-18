@@ -22,7 +22,7 @@
 
 @font-face {
   font-family: 'Northwell';
-  src: url('../fonts/Northwell.ttf') format('truetype');
+  src: url('../assets/fonts/Northwell.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
