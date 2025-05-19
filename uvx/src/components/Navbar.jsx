@@ -34,15 +34,17 @@ const Navbar = () => {
 
   return (
     <>
+     
+       
       <nav
         id="nav"
-        className="fixed top-0 left-0 z-50 w-full backdrop-blur-md bg-black/30"
+        className="fixed top-0 left-0 z-50 w-full  bg-transparent"
       >
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex bg-transparent justify-between items-center">
           <div className="flex items-center gap-2">
             <img src={NavLogo} alt="Logo" className="w-13 h-12 object-contain" />
           </div>
-
+        
           {/* Desktop Nav */}
 {/* Desktop Nav inside a bordered box */}
 <div className="hidden md:flex items-center border border-white rounded-full px-3 py-1 bg-white/5 backdrop-blur-sm">

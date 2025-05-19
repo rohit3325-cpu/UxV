@@ -43,7 +43,7 @@ const reasons = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="relative w-full bg-[#0D0D0D] text-white py-24 px-6 md:px-20 overflow-hidden">
+    <section className="relative w-full bg-black text-white py-24 px-6 md:px-20 overflow-hidden">
       {/* Red Glow Effect */}
       {/* <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[600px] h-[600px] bg-gradient-radial from-[#FF4D00]/30 via-[#FF2D00] to-transparent rounded-full blur-3xl opacity-30 z-0" /> */}
 
@@ -60,7 +60,7 @@ const WhyChooseUs = () => {
             <span className="relative inline-block text-[#F4D03F]">
               UxV?
               <svg
-                className="absolute -bottom-4.5 left-[50%] -translate-x-1/2 w-[120px] md:w-[160px] h-auto"
+                className="absolute -bottom-3 left-[50%] -translate-x-1/2 w-[90px] md:w-[110px] h-auto"
                 viewBox="0 0 200 30"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

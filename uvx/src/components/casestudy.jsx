@@ -46,7 +46,7 @@ const CaseStudies = () => {
         <span className="relative inline-block text-[#F4D03F]">
           Partners
           <svg
-            className="absolute -bottom-4.5 left-[64%] -translate-x-1/2 w-[150px] md:w-[160px] h-auto"
+            className="absolute -bottom-4.5 left-[50%] -translate-x-1/2 w-[150px] md:w-[160px] h-auto"
             viewBox="0 0 200 30"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

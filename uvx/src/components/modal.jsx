@@ -80,6 +80,55 @@ const Modal = ({ isOpen, onClose, creators, title }) => {
                   <p className="text-center mt-2 text-red-400 font-semibold text-sm">
                     {creator.name}
                   </p>
+
+
+                   <div className="sticky top-0 h-screen flex flex-col items-center justify-center z-10">
+        <motion.h2
+          initial={{ scale: 1.3, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
+          className="text-4xl sm:text-5xl md:text-6xl leading-snug tracking-wide text-center mb-12"
+          style={{
+            fontFamily: "'Northwell', cursive",
+            color: "white",
+            fontWeight: "normal",
+          }}
+        >
+          Our{" "}
+          <span className="relative inline-block text-red-500">
+            Services
+            <svg
+              className="absolute -bottom-4.5 left-[40%] -translate-x-1/2 w-[120px] md:w-[160px] h-auto"
+              viewBox="0 0 200 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <motion.path
+                d="M10 10 C60 0, 140 0, 190 10"
+                stroke="#ef4444"
+                strokeWidth="5"
+                strokeLinecap="round"
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
+                transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
+              />
+              <motion.path
+                d="M10 20 C60 10, 140 10, 190 20"
+                stroke="#ef4444"
+                strokeWidth="5"
+                strokeLinecap="round"
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
+                transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
+              />
+            </svg>
+          </span>
+        </motion.h2>
+
+
+
+
+
                 </div>
               </div>
             );

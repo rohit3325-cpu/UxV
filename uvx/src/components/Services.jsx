@@ -1,108 +1,43 @@
-import React, { useRef, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import backimage from "../assets/images/backgroundimage.jpg";
-import {
-  Users,
-  Rocket,
-  LayoutDashboard,
-  TrendingUp,
-  Megaphone,
-} from "lucide-react";
-import Modal from "./modal"; // Make sure path is correct
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
-const services = [
-  {
-    title: "Influencer Marketing",
-    description: "We connect your brand with top influencers...",
-    icon: <Users size={28} className="text-[#F4D03F]" />,
-    topCreators: [
-      { name: "@creator1", image: backimage },
-      { name: "@creator2", image: backimage },
-      { name: "@creator2", image: backimage },
-      { name: "@creator3", image: backimage },
-    ],
-  },
-  {
-    title: "Talent Management",
-    description: "We define your brand's voice and manage talent...",
-    icon: <Rocket size={28} className="text-[#F4D03F]" />,
-    topCreators: [
-      { name: "@creator1", image: "/images/creator1.jpg" },
-      { name: "@creator2", image: "/images/creator2.jpg" },
-      { name: "@creator2", image: "/images/creator2.jpg" },
-      { name: "@creator3", image: "/images/creator3.jpg" },
-    ],
-  },
-  {
-    title: "Content Creation",
-    description: "From ideation to execution, we create engaging content...",
-    icon: <LayoutDashboard size={28} className="text-[#F4D03F]" />,
-    topCreators: [
-      { name: "@creator1", image: "/images/creator1.jpg" },
-      { name: "@creator2", image: "/images/creator2.jpg" },
-      { name: "@creator2", image: "/images/creator2.jpg" },
-      { name: "@creator3", image: "/images/creator3.jpg" },
-    ],
-  },
-  {
-    title: "Podcast Management",
-    description: "We help you create, manage, and grow your podcast...",
-    icon: <TrendingUp size={28} className="text-[#F4D03F]" />,
-    topCreators: [
-      { name: "@creator1", image: "/images/creator1.jpg" },
-      { name: "@creator2", image: "/images/creator2.jpg" },
-      { name: "@creator2", image: "/images/creator2.jpg" },
-      { name: "@creator3", image: "/images/creator3.jpg" },
-    ],
-  },
-  {
-    title: "Video Editing",
-    description: "Our full-service video editing enhances storytelling...",
-    icon: <Megaphone size={28} className="text-[#F4D03F]" />,
-    topCreators: [
-      { name: "@creator1", image: "/images/creator1.jpg" },
-      { name: "@creator2", image: "/images/creator2.jpg" },
-      { name: "@creator2", image: "/images/creator2.jpg" },
-      { name: "@creator3", image: "/images/creator3.jpg" },
-    ],
-  },
-];
+const Services = () => {
+  const [animateIn, setAnimateIn] = useState(false);
 
-const ServicesSection = () => {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end end"],
-  });
+  useEffect(() => {
+    const timer = setTimeout(() => setAnimateIn(true), 50);
+    return () => clearTimeout(timer);
+  }, []);
 
-  const [modalData, setModalData] = useState({
-    open: false,
-    creators: [],
-    title: "",
-  });
-
-  const openModal = (creators, title) => {
-    setModalData({ open: true, creators, title });
-  };
-
-  const closeModal = () => {
-    setModalData({ open: false, creators: [], title: "" });
-  };
-
-  const total = services.length;
+  const creators = [
+    {
+      name: "Influencer Marketing",
+      video: "/videos/one.mp4",
+    },
+    {
+      name: "Podcast Management",
+      video: "/videos/two.mp4",
+    },
+    {
+      name: "Video Editing",
+      video: "/videos/three.mp4",
+    },
+    {
+      name: "Content Creation",
+      video: "/videos/four.mp4",
+    },
+  ];
 
   return (
-    <section
-      id="services"
-      ref={ref}
-      className="relative h-[600vh] bg-[#0D0D0D] px-6 md:px-20"
-    >
-      <div className="sticky top-0 h-screen flex flex-col items-center justify-center z-10">
+    <>
+      {/* Services Section */}
+      <section className="w-full bg-black py-20 px-4">
+        {/* Top Heading */}
         <motion.h2
-          initial={{ scale: 1.3, opacity: 0 }}
+          initial={{ scale: 1.2, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
-          className="text-4xl sm:text-5xl md:text-6xl leading-snug tracking-wide text-center mb-12"
+          transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
+          className="text-4xl sm:text-5xl md:text-6xl leading-snug tracking-wide text-center mb-16"
           style={{
             fontFamily: "'Northwell', cursive",
             color: "white",
@@ -140,62 +75,85 @@ const ServicesSection = () => {
           </span>
         </motion.h2>
 
-        <div className="absolute left-[-150px] top-1/2 transform -translate-y-1/2 w-[400px] h-[400px] bg-[#FF2C2C] opacity-30 blur-[150px] rounded-full z-0" />
+        {/* Cards */}
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col gap-8 items-center md:flex-row md:justify-between md:items-start px-4">
+            {creators.map((creator, index) => {
+              let positionClass = "";
+              let rotationClass = "";
 
-        <div className="relative w-full h-[60vh] flex items-center justify-center">
-          {services.map((service, index) => {
-            const start = index / total;
-            const end = (index + 1) / total;
+              if (index === 0 || index === 3) positionClass = "md:translate-y-0";
+              if (index === 1 || index === 2) positionClass = "md:translate-y-24";
 
-            const y = useTransform(scrollYProgress, [start, end], [0, -window.innerHeight]);
-            const opacity = useTransform(scrollYProgress, [start, end], [1, 0]);
-            const scale = useTransform(scrollYProgress, [start, end], [1, 0.9]);
-            const rotate = useTransform(scrollYProgress, [start, end], ["0deg", "-10deg"]);
-            const zIndex = useTransform(scrollYProgress, [start, end], [total - index, total - index + 1]);
+              if (index === 0) rotationClass = "md:-rotate-[5deg]";
+              if (index === 1) rotationClass = "md:-rotate-[2deg]";
+              if (index === 2) rotationClass = "md:rotate-[2deg]";
+              if (index === 3) rotationClass = "md:rotate-[5deg]";
 
-            return (
-              <motion.div
-                key={index}
-                style={{ y, opacity, scale, rotate, zIndex }}
-                className="absolute flex flex-col md:flex-row items-center justify-center gap-6"
-              >
-                {/* Entire card is clickable now */}
+              return (
                 <div
-                  onClick={() => openModal(service.topCreators, service.title)}
-                  className="cursor-pointer w-[320px] h-[440px] rounded-3xl overflow-hidden shadow-2xl border border-[#333] text-white relative transition-transform duration-300 hover:scale-105"
+                  key={index}
+                  style={{
+                    transform: animateIn ? "translateY(0)" : "translateY(20px)",
+                    opacity: animateIn ? 1 : 0,
+                    transition: "transform 0.3s ease, opacity 0.3s ease",
+                    transitionDelay: `${index * 100}ms`,
+                  }}
+                  className="w-full md:w-[22%]"
                 >
                   <div
-                    className="absolute inset-0 bg-cover bg-center z-0"
-                    style={{ backgroundImage: `url(${backimage})` }}
-                  />
-                  <div className="relative z-10 w-full h-full px-6 py-8 flex flex-col justify-center items-center text-center backdrop-brightness-[.85]">
-                    <div className="mb-4">{service.icon}</div>
-                    <h3 className="text-2xl font-semibold mb-3">
-                      {service.title}
-                    </h3>
-                    <p className="text-sm text-gray-300">
-                      {service.description}
+                    className={`bg-[#1a1a1a] p-3 rounded-xl shadow-md ${positionClass} ${rotationClass}`}
+                  >
+                    {creator.video ? (
+                      <video
+                        src={creator.video}
+                        controls
+                        className="w-full h-[300px] object-cover rounded-md"
+                      />
+                    ) : (
+                      <img
+                        src={creator.image}
+                        alt={creator.name}
+                        className="w-full h-[300px] object-cover rounded-md"
+                      />
+                    )}
+                    <p className="text-center mt-2 text-red-400 font-semibold text-sm">
+                      {creator.name}
                     </p>
                   </div>
                 </div>
-              </motion.div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
-      </div>
+      </section>
 
-      {/* Modal Component */}
-      <Modal
-        isOpen={modalData.open}
-        onClose={closeModal}
-        creators={modalData.creators}
-        title={modalData.title}
-      />
-    </section>
+      {/* 👇 New: Service Summary Section */}
+      <section className="w-full bg-black text-white py-20 px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto text-center"
+        >
+          <h3 className="text-4xl font-bold mb-8 text-red-500">Our Core Services</h3>
+          <ul className="text-lg text-gray-300 space-y-4">
+            <li>🎯 <strong>Influencer Marketing</strong> – Reach your target audience with impactful creators.</li>
+            <li>🎙️ <strong>Podcast Management</strong> – From recording to distribution, we handle it all.</li>
+            <li>✂️ <strong>Video Editing</strong> – Create scroll-stopping content for every platform.</li>
+            <li>📝 <strong>Content Creation</strong> – From ideas to execution, we make your brand shine.</li>
+          </ul>
+        </motion.div>
+      </section>
+
+      {/* Next Section (Placeholder) */}
+     
+    </>
   );
 };
 
-export default ServicesSection;
+export default Services;
 
 
 

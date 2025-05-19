@@ -20,7 +20,7 @@ const Stats = () => {
   return (
     <section
       id="work"
-      className="bg-[#0F0F0F] text-white py-24 px-6 md:px-20"
+      className="bg-black text-white py-24 px-6 md:px-20"
       ref={ref}
     >
       <div className="border border-white rounded-2xl p-10 md:p-12 bg-[#1A1A1A] shadow-md">

@@ -78,7 +78,7 @@ const HeroSection = () => {
             src={HeroImg}
             alt="Hero Logo"
             style={{ scale, opacity }}
-            className="relative z-10 max-w-full h-auto drop-shadow-[0_10px_25px_rgba(0,0,0,0.4)]"
+            className="relative z-9 max-w-full h-auto drop-shadow-[0_10px_25px_rgba(0,0,0,0.4)]"
           />
         </motion.div>
       </div>
