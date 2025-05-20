@@ -68,19 +68,24 @@ const HeroSection = () => {
         </motion.div>
 
         {/* Hero Image */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5, delay: 0.5 }}
-          className="relative flex items-center justify-center md:justify-end hero-img"
-        >
-          <motion.img
-            src={HeroImg}
-            alt="Hero Logo"
-            style={{ scale, opacity }}
-            className="relative z-9 max-w-full h-auto drop-shadow-[0_10px_25px_rgba(0,0,0,0.4)]"
-          />
-        </motion.div>
+       {/* Hero Image */}
+<motion.div
+  initial={{ opacity: 0, scale: 0.8 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 1.5, delay: 0.5 }}
+  className="relative flex items-center justify-center md:justify-end hero-img"
+>
+  <motion.img
+    src={HeroImg}
+    alt="Hero Logo"
+    style={{
+      scale: useTransform(scale, (value) => value * 0.85), // Make image 15% smaller
+      opacity,
+    }}
+    className="relative z-9 max-w-full h-auto drop-shadow-[0_10px_25px_rgba(0,0,0,0.4)]"
+  />
+</motion.div>
+
       </div>
     </section>
   );
