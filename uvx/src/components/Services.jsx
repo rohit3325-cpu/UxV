@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import {
+  Megaphone,
+  Mic,
+  Scissors,
+  PenTool
+} from "lucide-react";
+
 
 const Services = () => {
   const [animateIn, setAnimateIn] = useState(false);
@@ -128,26 +135,70 @@ const Services = () => {
         </div>
       </section>
 
-      {/* 👇 New: Service Summary Section */}
-      <section className="w-full bg-black text-white py-20 px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="max-w-4xl mx-auto text-center"
-        >
-          <h3 className="text-4xl font-bold mb-8 text-red-500">Our Core Services</h3>
-          <ul className="text-lg text-gray-300 space-y-4">
-            <li>🎯 <strong>Influencer Marketing</strong> – Reach your target audience with impactful creators.</li>
-            <li>🎙️ <strong>Podcast Management</strong> – From recording to distribution, we handle it all.</li>
-            <li>✂️ <strong>Video Editing</strong> – Create scroll-stopping content for every platform.</li>
-            <li>📝 <strong>Content Creation</strong> – From ideas to execution, we make your brand shine.</li>
-          </ul>
-        </motion.div>
-      </section>
+    
 
-      {/* Next Section (Placeholder) */}
+
+<section className="w-full bg-black text-white py-20 px-4">
+  <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+    viewport={{ once: true }}
+    className="max-w-6xl mx-auto text-center"
+  >
+    
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 px-4">
+      {/* Card 1 */}
+      <div className="bg-[#1a1a1a] p-6 rounded-2xl shadow-lg hover:scale-105 transition-all duration-300">
+        <div className="flex flex-col items-center text-center">
+          <Megaphone className="w-10 h-10 text-red-400 mb-4" />
+          <h4 className="text-xl font-semibold text-white mb-2">Influencer Marketing</h4>
+          <p className="text-gray-400 text-sm">
+            Reach your target audience with impactful creators.
+          </p>
+        </div>
+      </div>
+
+      {/* Card 2 */}
+      <div className="bg-[#1a1a1a] p-6 rounded-2xl shadow-lg hover:scale-105 transition-all duration-300">
+        <div className="flex flex-col items-center text-center">
+          <Mic className="w-10 h-10 text-red-400 mb-4" />
+          <h4 className="text-xl font-semibold text-white mb-2">Podcast Management</h4>
+          <p className="text-gray-400 text-sm">
+            From recording to distribution, we handle it all.
+          </p>
+        </div>
+      </div>
+
+      {/* Card 3 */}
+      <div className="bg-[#1a1a1a] p-6 rounded-2xl shadow-lg hover:scale-105 transition-all duration-300">
+        <div className="flex flex-col items-center text-center">
+          <Scissors className="w-10 h-10 text-red-400 mb-4" />
+          <h4 className="text-xl font-semibold text-white mb-2">Video Editing</h4>
+          <p className="text-gray-400 text-sm">
+            Create scroll-stopping content for every platform.
+          </p>
+        </div>
+      </div>
+
+      {/* Card 4 */}
+      <div className="bg-[#1a1a1a] p-6 rounded-2xl shadow-lg hover:scale-105 transition-all duration-300">
+        <div className="flex flex-col items-center text-center">
+          <PenTool className="w-10 h-10 text-red-400 mb-4" />
+          <h4 className="text-xl font-semibold text-white mb-2">Content Creation</h4>
+          <p className="text-gray-400 text-sm">
+            From ideas to execution, we make your brand shine.
+          </p>
+        </div>
+      </div>
+    </div>
+  </motion.div>
+</section>
+
+
+
+     
      
     </>
   );
