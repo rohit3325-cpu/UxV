@@ -101,7 +101,7 @@ const WhyChooseUs = () => {
                 {item.icon}
               </div>
               <div>
-                <h4 className="text-xl mb-2 text-white" style={{ fontFamily: "'Northwell', cursive" }}>
+                <h4 className="text-xl mb-2 text-white" >
                   {item.title}
                 </h4>
                 <p className="text-[#B3B3B3]">{item.description}</p>

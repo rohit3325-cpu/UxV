@@ -95,7 +95,7 @@ const Navbar = () => {
               className="hidden md:flex items-center gap-2 border border-white rounded-full px-4 py-2 bg-white/10 backdrop-blur-sm text-white font-medium transition hover:text-yellow-400 hover:bg-white/20"
           >
             <Mail size={18} />
-            Let's Connect
+            Let's Work
           </HashLink>
 
           {/* Mobile Toggle */}
@@ -158,7 +158,7 @@ const Navbar = () => {
             className="w-44 text-center px-4 py-2 rounded-lg bg-[#F4D03F] text-black hover:bg-yellow-400 transition"
           >
             <Mail size={18} className="inline-block mr-2" />
-            Contact
+            Let's Work
           </HashLink>
         </nav>
       </div>
